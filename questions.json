@@ -23,7 +23,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "把例外当原则",
+      "近似术语混用"
+    ]
   },
   {
     "id": "c1-q5",
@@ -49,7 +55,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "把例外当原则",
+      "近似术语混用"
+    ]
   },
   {
     "id": "k01-v3",
@@ -75,7 +87,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "把例外当原则",
+      "近似术语混用"
+    ]
   },
   {
     "id": "c1-q2",
@@ -101,7 +119,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "条件遗漏",
+      "主体错位"
+    ]
   },
   {
     "id": "k02-v2",
@@ -127,7 +151,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "条件遗漏",
+      "主体错位"
+    ]
   },
   {
     "id": "k02-v3",
@@ -153,7 +183,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "条件遗漏",
+      "主体错位"
+    ]
   },
   {
     "id": "c1-q3",
@@ -179,7 +215,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "范围扩大或缩小",
+      "主体错位"
+    ]
   },
   {
     "id": "c1-q6",
@@ -205,7 +247,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "范围扩大或缩小",
+      "主体错位"
+    ]
   },
   {
     "id": "k03-v3",
@@ -231,7 +279,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "范围扩大或缩小",
+      "主体错位"
+    ]
   },
   {
     "id": "c1-q4",
@@ -257,7 +311,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "举证责任方向错误",
+      "主体错位"
+    ]
   },
   {
     "id": "k04-v2",
@@ -283,7 +343,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "举证责任方向错误",
+      "主体错位"
+    ]
   },
   {
     "id": "k04-v3",
@@ -309,7 +375,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "举证责任方向错误",
+      "主体错位"
+    ]
   },
   {
     "id": "c2-q1",
@@ -335,7 +407,12 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "把学理分类当法定类型"
+    ]
   },
   {
     "id": "k05-v2",
@@ -361,7 +438,12 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "把学理分类当法定类型"
+    ]
   },
   {
     "id": "k05-v3",
@@ -387,7 +469,12 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "把学理分类当法定类型"
+    ]
   },
   {
     "id": "c2-q2",
@@ -413,7 +500,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "近似术语混用",
+      "条件遗漏"
+    ]
   },
   {
     "id": "k06-v2",
@@ -439,7 +532,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "近似术语混用",
+      "条件遗漏"
+    ]
   },
   {
     "id": "k06-v3",
@@ -465,7 +564,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "近似术语混用",
+      "条件遗漏"
+    ]
   },
   {
     "id": "c2-q3",
@@ -491,7 +596,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "主体错位",
+      "后果错误"
+    ]
   },
   {
     "id": "k07-v2",
@@ -517,7 +628,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "主体错位",
+      "后果错误"
+    ]
   },
   {
     "id": "k07-v3",
@@ -543,7 +660,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "主体错位",
+      "后果错误"
+    ]
   },
   {
     "id": "c2-q4",
@@ -569,7 +692,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "主体错位",
+      "范围扩大或缩小"
+    ]
   },
   {
     "id": "k08-v2",
@@ -595,7 +724,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "主体错位",
+      "范围扩大或缩小"
+    ]
   },
   {
     "id": "k08-v3",
@@ -621,7 +756,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "主体错位",
+      "范围扩大或缩小"
+    ]
   },
   {
     "id": "c2-q5",
@@ -647,7 +788,12 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "把学理分类当法定类型"
+    ]
   },
   {
     "id": "k09-v2",
@@ -673,7 +819,12 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "把学理分类当法定类型"
+    ]
   },
   {
     "id": "k09-v3",
@@ -699,7 +850,12 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "把学理分类当法定类型"
+    ]
   },
   {
     "id": "c2-q6",
@@ -725,7 +881,12 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "近似术语混用"
+    ]
   },
   {
     "id": "k10-v2",
@@ -751,7 +912,12 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "近似术语混用"
+    ]
   },
   {
     "id": "k10-v3",
@@ -777,7 +943,12 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "近似术语混用"
+    ]
   },
   {
     "id": "c3-q1",
@@ -803,7 +974,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "条件遗漏"
+    ]
   },
   {
     "id": "k11-v2",
@@ -829,7 +1006,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "条件遗漏"
+    ]
   },
   {
     "id": "k11-v3",
@@ -855,7 +1038,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "条件遗漏"
+    ]
   },
   {
     "id": "c3-q2",
@@ -881,7 +1070,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "效力层级混淆",
+      "条件遗漏"
+    ]
   },
   {
     "id": "k12-v2",
@@ -907,7 +1102,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "效力层级混淆",
+      "条件遗漏"
+    ]
   },
   {
     "id": "k12-v3",
@@ -933,7 +1134,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "效力层级混淆",
+      "条件遗漏"
+    ]
   },
   {
     "id": "c3-q3",
@@ -959,7 +1166,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "条件遗漏"
+    ]
   },
   {
     "id": "k13-v2",
@@ -985,7 +1198,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "条件遗漏"
+    ]
   },
   {
     "id": "k13-v3",
@@ -1011,7 +1230,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "条件遗漏"
+    ]
   },
   {
     "id": "c3-q4",
@@ -1037,7 +1262,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "主体错位"
+    ]
   },
   {
     "id": "boss-q1",
@@ -1063,7 +1294,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "主体错位"
+    ]
   },
   {
     "id": "pro-q6",
@@ -1089,7 +1326,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "主体错位"
+    ]
   },
   {
     "id": "boss-q2",
@@ -1115,7 +1358,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "程序错误"
+    ]
   },
   {
     "id": "k15-v2",
@@ -1141,7 +1390,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "程序错误"
+    ]
   },
   {
     "id": "k15-v3",
@@ -1167,7 +1422,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "程序错误"
+    ]
   },
   {
     "id": "c3-q5",
@@ -1193,7 +1454,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "效力层级混淆"
+    ]
   },
   {
     "id": "pro-q7",
@@ -1219,7 +1486,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "效力层级混淆"
+    ]
   },
   {
     "id": "pro-q11",
@@ -1245,7 +1518,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "效力层级混淆"
+    ]
   },
   {
     "id": "c3-q6",
@@ -1271,7 +1550,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "条件遗漏"
+    ]
   },
   {
     "id": "pro-q5",
@@ -1297,7 +1582,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "条件遗漏"
+    ]
   },
   {
     "id": "k17-v3",
@@ -1323,7 +1614,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "条件遗漏"
+    ]
   },
   {
     "id": "boss-q3",
@@ -1349,7 +1646,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "把例外当原则",
+      "范围扩大或缩小"
+    ]
   },
   {
     "id": "pro-q8",
@@ -1375,7 +1678,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "把例外当原则",
+      "范围扩大或缩小"
+    ]
   },
   {
     "id": "k18-v3",
@@ -1401,7 +1710,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "把例外当原则",
+      "范围扩大或缩小"
+    ]
   },
   {
     "id": "boss-q4",
@@ -1427,7 +1742,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "举证责任方向错误"
+    ]
   },
   {
     "id": "pro-q9",
@@ -1453,7 +1774,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "举证责任方向错误"
+    ]
   },
   {
     "id": "k19-v3",
@@ -1479,7 +1806,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "举证责任方向错误"
+    ]
   },
   {
     "id": "pro-q10",
@@ -1505,7 +1838,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "程序错误"
+    ]
   },
   {
     "id": "k20-v2",
@@ -1531,7 +1870,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "程序错误"
+    ]
   },
   {
     "id": "k20-v3",
@@ -1557,7 +1902,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "程序错误"
+    ]
   },
   {
     "id": "pro-q1",
@@ -1583,7 +1934,12 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "新旧法混用"
+    ]
   },
   {
     "id": "pro-q12",
@@ -1609,7 +1965,12 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "新旧法混用"
+    ]
   },
   {
     "id": "k21-v3",
@@ -1635,7 +1996,12 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "新旧法混用"
+    ]
   },
   {
     "id": "pro-q2",
@@ -1661,7 +2027,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "条件遗漏",
+      "后果错误"
+    ]
   },
   {
     "id": "k22-v2",
@@ -1687,7 +2059,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "条件遗漏",
+      "后果错误"
+    ]
   },
   {
     "id": "k22-v3",
@@ -1713,7 +2091,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "条件遗漏",
+      "后果错误"
+    ]
   },
   {
     "id": "pro-q3",
@@ -1739,7 +2123,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "后果错误"
+    ]
   },
   {
     "id": "k23-v2",
@@ -1765,7 +2155,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "后果错误"
+    ]
   },
   {
     "id": "k23-v3",
@@ -1791,7 +2187,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "后果错误"
+    ]
   },
   {
     "id": "pro-q4",
@@ -1817,7 +2219,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "举证责任方向错误"
+    ]
   },
   {
     "id": "k24-v2",
@@ -1843,7 +2251,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "举证责任方向错误"
+    ]
   },
   {
     "id": "k24-v3",
@@ -1869,7 +2283,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "举证责任方向错误"
+    ]
   },
   {
     "id": "boss-q5",
@@ -1895,7 +2315,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "综合 责任主体与组织关系",
+    "grade": "补充",
+    "errorTags": [
+      "主体错位",
+      "主体错位"
+    ]
   },
   {
     "id": "k25-v2",
@@ -1921,7 +2347,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "综合 责任主体与组织关系",
+    "grade": "补充",
+    "errorTags": [
+      "主体错位",
+      "主体错位"
+    ]
   },
   {
     "id": "k25-v3",
@@ -1947,7 +2379,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "综合 责任主体与组织关系",
+    "grade": "补充",
+    "errorTags": [
+      "主体错位",
+      "主体错位"
+    ]
   },
   {
     "id": "boss-q6",
@@ -1973,7 +2411,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "综合 公司分类",
+    "grade": "补充",
+    "errorTags": [
+      "把学理分类当法定类型",
+      "近似术语混用"
+    ]
   },
   {
     "id": "k26-v2",
@@ -1999,7 +2443,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "综合 公司分类",
+    "grade": "补充",
+    "errorTags": [
+      "把学理分类当法定类型",
+      "近似术语混用"
+    ]
   },
   {
     "id": "k26-v3",
@@ -2025,7 +2475,13 @@
     "formatLabel": "选择题",
     "sourceStatus": "verified",
     "trap": "",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "综合 公司分类",
+    "grade": "补充",
+    "errorTags": [
+      "把学理分类当法定类型",
+      "近似术语混用"
+    ]
   },
   {
     "id": "a1-art",
@@ -2051,7 +2507,13 @@
     "formatLabel": "法条定位",
     "sourceStatus": "verified",
     "trap": "不要把股东有限责任与法人人格否认混为一谈。",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "把例外当原则",
+      "近似术语混用"
+    ]
   },
   {
     "id": "a1-tf",
@@ -2075,7 +2537,13 @@
     "formatLabel": "真假法谚",
     "sourceStatus": "verified",
     "trap": "把“例外”说成“任何情况下”。",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "把例外当原则",
+      "近似术语混用"
+    ]
   },
   {
     "id": "a1-case",
@@ -2103,7 +2571,13 @@
     "trap": "责任主体看反。",
     "caseStem": "甲公司和股东乙是两个独立法律主体。公司对外欠债，债权人要求乙直接清偿全部债务。",
     "questionStem": "原则上应如何处理？",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "把例外当原则",
+      "近似术语混用"
+    ]
   },
   {
     "id": "a2-art",
@@ -2129,7 +2603,13 @@
     "formatLabel": "法条定位",
     "sourceStatus": "verified",
     "trap": "把第1款和第2款、第3款混掉。",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "范围扩大或缩小",
+      "主体错位"
+    ]
   },
   {
     "id": "a2-tf",
@@ -2153,7 +2633,13 @@
     "formatLabel": "真假法谚",
     "sourceStatus": "verified",
     "trap": "把横向否认的责任效果记成各自负责。",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "范围扩大或缩小",
+      "主体错位"
+    ]
   },
   {
     "id": "a2-case",
@@ -2181,7 +2667,13 @@
     "trap": "把“任一公司”理解成“各自公司”。",
     "caseStem": "甲控制B、C两公司，利用两公司转移资产、逃避债务，严重损害债权人利益。",
     "questionStem": "B、C对其中任一公司的债务承担什么责任？",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "范围扩大或缩小",
+      "主体错位"
+    ]
   },
   {
     "id": "a3-art",
@@ -2207,7 +2699,13 @@
     "formatLabel": "法条定位",
     "sourceStatus": "verified",
     "trap": "把举证方向说反。",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "举证责任方向错误",
+      "主体错位"
+    ]
   },
   {
     "id": "a3-tf",
@@ -2231,7 +2729,13 @@
     "formatLabel": "真假法谚",
     "sourceStatus": "verified",
     "trap": "把举证责任倒置记成一般举证规则。",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "举证责任方向错误",
+      "主体错位"
+    ]
   },
   {
     "id": "a3-case",
@@ -2259,7 +2763,13 @@
     "trap": "责任主体和举证方向同时看反。",
     "caseStem": "A公司只有一个股东甲。债权人要求甲对公司债务承担连带责任，甲不能证明公司财产独立于自己的财产。",
     "questionStem": "谁承担证明责任，法律后果是什么？",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "举证责任方向错误",
+      "主体错位"
+    ]
   },
   {
     "id": "a4-art",
@@ -2285,7 +2795,12 @@
     "formatLabel": "法条定位",
     "sourceStatus": "verified",
     "trap": "把学理分类当成法定类型。",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "把学理分类当法定类型"
+    ]
   },
   {
     "id": "a4-tf",
@@ -2309,7 +2824,12 @@
     "formatLabel": "真假法谚",
     "sourceStatus": "verified",
     "trap": "把比较法分类当法定类型。",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "把学理分类当法定类型"
+    ]
   },
   {
     "id": "a4-case",
@@ -2337,7 +2857,12 @@
     "trap": "把分类标准当公司类型。",
     "caseStem": "甲拟在我国设立一家公司，询问我国《公司法》承认哪些法定公司类型。",
     "questionStem": "下列回答正确的是？",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "把学理分类当法定类型"
+    ]
   },
   {
     "id": "a5-art",
@@ -2363,7 +2888,13 @@
     "formatLabel": "法条定位",
     "sourceStatus": "verified",
     "trap": "把有限公司和股份公司的资本结构混掉。",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "近似术语混用",
+      "条件遗漏"
+    ]
   },
   {
     "id": "a5-tf",
@@ -2387,7 +2918,13 @@
     "formatLabel": "真假法谚",
     "sourceStatus": "verified",
     "trap": "把是否上市当核心区别。",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "近似术语混用",
+      "条件遗漏"
+    ]
   },
   {
     "id": "a5-case",
@@ -2415,7 +2952,13 @@
     "trap": "把两类的资本结构看反。",
     "caseStem": "甲公司资本不拆分为等额股份，股权转让受到较多限制；乙公司资本拆分为等额股份，股份原则上可依法转让。",
     "questionStem": "哪项更符合两家公司的类型特征？",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "近似术语混用",
+      "条件遗漏"
+    ]
   },
   {
     "id": "a6-art",
@@ -2441,7 +2984,13 @@
     "formatLabel": "法条定位",
     "sourceStatus": "verified",
     "trap": "把分公司责任写成连带责任。",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "主体错位",
+      "后果错误"
+    ]
   },
   {
     "id": "a6-tf",
@@ -2465,7 +3014,13 @@
     "formatLabel": "真假法谚",
     "sourceStatus": "verified",
     "trap": "把责任承担写成连带。",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "主体错位",
+      "后果错误"
+    ]
   },
   {
     "id": "a6-case",
@@ -2493,7 +3048,13 @@
     "trap": "责任主体写成连带。",
     "caseStem": "乙公司是甲公司的分公司。乙公司以自己名义经营并欠债，债权人要求承担责任。",
     "questionStem": "责任应如何承担？",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "主体错位",
+      "后果错误"
+    ]
   },
   {
     "id": "a7-art",
@@ -2519,7 +3080,13 @@
     "formatLabel": "法条定位",
     "sourceStatus": "verified",
     "trap": "把一般担保当成必须股东会决议。",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "条件遗漏"
+    ]
   },
   {
     "id": "a7-tf",
@@ -2543,7 +3110,13 @@
     "formatLabel": "真假法谚",
     "sourceStatus": "verified",
     "trap": "把一般担保和特殊担保的决议机关混掉。",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "条件遗漏"
+    ]
   },
   {
     "id": "a7-case",
@@ -2571,7 +3144,13 @@
     "trap": "把一般担保的决议机关固定化。",
     "caseStem": "A公司为普通第三人B提供担保。A公司章程规定该担保由董事会决议。",
     "questionStem": "决议机关如何确定？",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "条件遗漏"
+    ]
   },
   {
     "id": "a8-art",
@@ -2597,7 +3176,13 @@
     "formatLabel": "法条定位",
     "sourceStatus": "verified",
     "trap": "把特殊担保误按一般担保处理。",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "主体错位"
+    ]
   },
   {
     "id": "a8-tf",
@@ -2621,7 +3206,13 @@
     "formatLabel": "真假法谚",
     "sourceStatus": "verified",
     "trap": "忘记利害股东回避。",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "主体错位"
+    ]
   },
   {
     "id": "a8-case",
@@ -2649,7 +3240,13 @@
     "trap": "漏掉利害股东回避。",
     "caseStem": "A公司为股东甲提供担保。股东会表决时，甲参加并投了赞成票，决议通过。",
     "questionStem": "该表决程序是否合法？",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "主体错位"
+    ]
   },
   {
     "id": "a9-art",
@@ -2675,7 +3272,13 @@
     "formatLabel": "法条定位",
     "sourceStatus": "verified",
     "trap": "把合同效力规则和公司法决议规则混掉。",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "效力层级混淆"
+    ]
   },
   {
     "id": "a9-tf",
@@ -2699,7 +3302,13 @@
     "formatLabel": "真假法谚",
     "sourceStatus": "verified",
     "trap": "把担保责任和赔偿责任混为一谈。",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "效力层级混淆"
+    ]
   },
   {
     "id": "a9-case",
@@ -2727,7 +3336,13 @@
     "trap": "把未审查决议当成善意。",
     "caseStem": "法定代表人甲未经决议以公司名义为他人提供担保。相对人乙未审查任何决议，主张自己善意。",
     "questionStem": "通常如何认定？",
-    "bankVersion": "v6"
+    "bankVersion": "v7",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "效力层级混淆"
+    ]
   },
   {
     "kid": "K02",
@@ -2738,7 +3353,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k02-art",
     "variant": 4,
@@ -2753,7 +3368,13 @@
     ],
     "answer": 0,
     "explain": "第23条第1款是纵向法人人格否认：滥用 + 逃避债务 + 严重损害债权人利益，三者具备才可能让股东对公司债务承担连带责任。",
-    "anchor": "《公司法》第23条第1款"
+    "anchor": "《公司法》第23条第1款",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "条件遗漏",
+      "主体错位"
+    ]
   },
   {
     "kid": "K02",
@@ -2764,7 +3385,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k02-tf",
     "variant": 5,
@@ -2777,7 +3398,13 @@
     ],
     "answer": 0,
     "explain": "第23条第1款是纵向法人人格否认：滥用 + 逃避债务 + 严重损害债权人利益，三者具备才可能让股东对公司债务承担连带责任。 该表述正确。",
-    "anchor": "《公司法》第23条第1款"
+    "anchor": "《公司法》第23条第1款",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "条件遗漏",
+      "主体错位"
+    ]
   },
   {
     "kid": "K02",
@@ -2788,7 +3415,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k02-case",
     "variant": 6,
@@ -2805,7 +3432,13 @@
     ],
     "answer": 1,
     "explain": "第23条第1款是纵向法人人格否认：滥用 + 逃避债务 + 严重损害债权人利益，三者具备才可能让股东对公司债务承担连带责任。",
-    "anchor": "《公司法》第23条第1款"
+    "anchor": "《公司法》第23条第1款",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "条件遗漏",
+      "主体错位"
+    ]
   },
   {
     "kid": "K08",
@@ -2816,7 +3449,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k08-art",
     "variant": 4,
@@ -2831,7 +3464,13 @@
     ],
     "answer": 0,
     "explain": "子公司具有独立法人资格，原则上独立承担民事责任。母公司不因持股当然负责，只有符合人格否认等例外条件时才可能承担连带责任。",
-    "anchor": "《公司法》第13条、第23条"
+    "anchor": "《公司法》第13条、第23条",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "主体错位",
+      "范围扩大或缩小"
+    ]
   },
   {
     "kid": "K08",
@@ -2842,7 +3481,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k08-tf",
     "variant": 5,
@@ -2855,7 +3494,13 @@
     ],
     "answer": 1,
     "explain": "子公司具有独立法人资格，原则上独立承担民事责任。母公司不因持股当然负责，只有符合人格否认等例外条件时才可能承担连带责任。 该表述错误，正确表述是：丙公司有法人资格，原则上独立承担责任",
-    "anchor": "《公司法》第13条、第23条"
+    "anchor": "《公司法》第13条、第23条",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "主体错位",
+      "范围扩大或缩小"
+    ]
   },
   {
     "kid": "K08",
@@ -2866,7 +3511,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k08-case",
     "variant": 6,
@@ -2883,7 +3528,13 @@
     ],
     "answer": 1,
     "explain": "子公司具有独立法人资格，原则上独立承担民事责任。母公司不因持股当然负责，只有符合人格否认等例外条件时才可能承担连带责任。",
-    "anchor": "《公司法》第13条、第23条"
+    "anchor": "《公司法》第13条、第23条",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "主体错位",
+      "范围扩大或缩小"
+    ]
   },
   {
     "kid": "K09",
@@ -2894,7 +3545,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k09-art",
     "variant": 4,
@@ -2909,7 +3560,12 @@
     ],
     "answer": 2,
     "explain": "人合公司以股东个人信用为基础，典型是无限公司；资合公司以公司资本为基础，典型是股份有限公司。有限责任公司通常归入人合兼资合公司。",
-    "anchor": "第二章：按信用基础分类"
+    "anchor": "第二章：按信用基础分类",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "把学理分类当法定类型"
+    ]
   },
   {
     "kid": "K09",
@@ -2920,7 +3576,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k09-tf",
     "variant": 5,
@@ -2933,7 +3589,12 @@
     ],
     "answer": 0,
     "explain": "人合公司以股东个人信用为基础，典型是无限公司；资合公司以公司资本为基础，典型是股份有限公司。有限责任公司通常归入人合兼资合公司。 该表述正确。",
-    "anchor": "第二章：按信用基础分类"
+    "anchor": "第二章：按信用基础分类",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "把学理分类当法定类型"
+    ]
   },
   {
     "kid": "K09",
@@ -2944,7 +3605,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k09-case",
     "variant": 6,
@@ -2961,7 +3622,12 @@
     ],
     "answer": 1,
     "explain": "人合公司以股东个人信用为基础，典型是无限公司；资合公司以公司资本为基础，典型是股份有限公司。有限责任公司通常归入人合兼资合公司。",
-    "anchor": "第二章：按信用基础分类"
+    "anchor": "第二章：按信用基础分类",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "把学理分类当法定类型"
+    ]
   },
   {
     "kid": "K10",
@@ -2972,7 +3638,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k10-art",
     "variant": 4,
@@ -2987,7 +3653,12 @@
     ],
     "answer": 1,
     "explain": "封闭式、开放式是学理分类，不能直接等同于上市、非上市。非上市股份公司也不当然变成人合公司。",
-    "anchor": "第二章：易混对比"
+    "anchor": "第二章：易混对比",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "近似术语混用"
+    ]
   },
   {
     "kid": "K10",
@@ -2998,7 +3669,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k10-tf",
     "variant": 5,
@@ -3011,7 +3682,12 @@
     ],
     "answer": 1,
     "explain": "封闭式、开放式是学理分类，不能直接等同于上市、非上市。非上市股份公司也不当然变成人合公司。 该表述错误，正确表述是：封闭式、开放式是学理分类，不等同上市与否",
-    "anchor": "第二章：易混对比"
+    "anchor": "第二章：易混对比",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "近似术语混用"
+    ]
   },
   {
     "kid": "K10",
@@ -3022,7 +3698,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k10-case",
     "variant": 6,
@@ -3039,7 +3715,12 @@
     ],
     "answer": 2,
     "explain": "封闭式、开放式是学理分类，不能直接等同于上市、非上市。非上市股份公司也不当然变成人合公司。",
-    "anchor": "第二章：易混对比"
+    "anchor": "第二章：易混对比",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "近似术语混用"
+    ]
   },
   {
     "kid": "K11",
@@ -3050,7 +3731,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k11-art",
     "variant": 4,
@@ -3065,7 +3746,13 @@
     ],
     "answer": 1,
     "explain": "公司成立于营业执照签发之日，法人资格终止于注销登记。清算期间公司仍存在，但原则上不得从事与清算无关的经营活动。",
-    "anchor": "《公司法》第33条"
+    "anchor": "《公司法》第33条",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "条件遗漏"
+    ]
   },
   {
     "kid": "K11",
@@ -3076,7 +3763,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k11-tf",
     "variant": 5,
@@ -3089,7 +3776,13 @@
     ],
     "answer": 0,
     "explain": "公司成立于营业执照签发之日，法人资格终止于注销登记。清算期间公司仍存在，但原则上不得从事与清算无关的经营活动。 该表述正确。",
-    "anchor": "《公司法》第33条"
+    "anchor": "《公司法》第33条",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "条件遗漏"
+    ]
   },
   {
     "kid": "K11",
@@ -3100,7 +3793,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k11-case",
     "variant": 6,
@@ -3117,7 +3810,13 @@
     ],
     "answer": 1,
     "explain": "公司成立于营业执照签发之日，法人资格终止于注销登记。清算期间公司仍存在，但原则上不得从事与清算无关的经营活动。",
-    "anchor": "《公司法》第33条"
+    "anchor": "《公司法》第33条",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "条件遗漏"
+    ]
   },
   {
     "kid": "K12",
@@ -3128,7 +3827,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k12-art",
     "variant": 4,
@@ -3143,7 +3842,13 @@
     ],
     "answer": 3,
     "explain": "经营范围主要约束内部管理和登记事项。不能仅因超越经营范围就认定合同无效；合同效力按《民法典》一般效力规则判断，依法需要批准的项目还要单独判断批准要求的影响。",
-    "anchor": "《民法典》第505条"
+    "anchor": "《民法典》第505条",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "效力层级混淆",
+      "条件遗漏"
+    ]
   },
   {
     "kid": "K12",
@@ -3154,7 +3859,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k12-tf",
     "variant": 5,
@@ -3167,7 +3872,13 @@
     ],
     "answer": 1,
     "explain": "经营范围主要约束内部管理和登记事项。不能仅因超越经营范围就认定合同无效；合同效力按《民法典》一般效力规则判断，依法需要批准的项目还要单独判断批准要求的影响。 该表述错误，正确表述是：不能仅以超越经营范围认定无效，按一般规则判断",
-    "anchor": "《民法典》第505条"
+    "anchor": "《民法典》第505条",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "效力层级混淆",
+      "条件遗漏"
+    ]
   },
   {
     "kid": "K12",
@@ -3178,7 +3889,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k12-case",
     "variant": 6,
@@ -3195,7 +3906,13 @@
     ],
     "answer": 2,
     "explain": "经营范围主要约束内部管理和登记事项。不能仅因超越经营范围就认定合同无效；合同效力按《民法典》一般效力规则判断，依法需要批准的项目还要单独判断批准要求的影响。",
-    "anchor": "《民法典》第505条"
+    "anchor": "《民法典》第505条",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "效力层级混淆",
+      "条件遗漏"
+    ]
   },
   {
     "kid": "K15",
@@ -3206,7 +3923,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k15-art",
     "variant": 4,
@@ -3221,7 +3938,13 @@
     ],
     "answer": 2,
     "explain": "A为B提供担保，是A的普通对外担保，按A公司章程由A的董事会或者股东会决议，不触发B的股东会程序。只有B为A担保时，才触发B的特殊担保规则。",
-    "anchor": "第三章：B级高频方向辨析"
+    "anchor": "第三章：B级高频方向辨析",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "程序错误"
+    ]
   },
   {
     "kid": "K15",
@@ -3232,7 +3955,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k15-tf",
     "variant": 5,
@@ -3245,7 +3968,13 @@
     ],
     "answer": 0,
     "explain": "A为B提供担保，是A的普通对外担保，按A公司章程由A的董事会或者股东会决议，不触发B的股东会程序。只有B为A担保时，才触发B的特殊担保规则。 该表述正确。",
-    "anchor": "第三章：B级高频方向辨析"
+    "anchor": "第三章：B级高频方向辨析",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "程序错误"
+    ]
   },
   {
     "kid": "K15",
@@ -3256,7 +3985,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k15-case",
     "variant": 6,
@@ -3273,7 +4002,13 @@
     ],
     "answer": 0,
     "explain": "A为B提供担保，是A的普通对外担保，按A公司章程由A的董事会或者股东会决议，不触发B的股东会程序。只有B为A担保时，才触发B的特殊担保规则。",
-    "anchor": "第三章：B级高频方向辨析"
+    "anchor": "第三章：B级高频方向辨析",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "程序错误"
+    ]
   },
   {
     "kid": "K17",
@@ -3284,7 +4019,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k17-art",
     "variant": 4,
@@ -3299,7 +4034,13 @@
     ],
     "answer": 3,
     "explain": "为股东或实际控制人担保，应当审查股东会决议。只审查董事会决议属于非善意，因为审查对象本身就错了。合理审查原则上是形式审查，但不是完全不审查。",
-    "anchor": "担保制度解释第7条"
+    "anchor": "担保制度解释第7条",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "条件遗漏"
+    ]
   },
   {
     "kid": "K17",
@@ -3310,7 +4051,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k17-tf",
     "variant": 5,
@@ -3323,7 +4064,13 @@
     ],
     "answer": 1,
     "explain": "为股东或实际控制人担保，应当审查股东会决议。只审查董事会决议属于非善意，因为审查对象本身就错了。合理审查原则上是形式审查，但不是完全不审查。 该表述错误，正确表述是：为股东担保，只审查了董事会决议未审查股东会",
-    "anchor": "担保制度解释第7条"
+    "anchor": "担保制度解释第7条",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "条件遗漏"
+    ]
   },
   {
     "kid": "K17",
@@ -3334,7 +4081,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k17-case",
     "variant": 6,
@@ -3351,7 +4098,13 @@
     ],
     "answer": 1,
     "explain": "为股东或实际控制人担保，应当审查股东会决议。只审查董事会决议属于非善意，因为审查对象本身就错了。合理审查原则上是形式审查，但不是完全不审查。",
-    "anchor": "担保制度解释第7条"
+    "anchor": "担保制度解释第7条",
+    "part": "第一部分 公司法",
+    "grade": "A",
+    "errorTags": [
+      "程序错误",
+      "条件遗漏"
+    ]
   },
   {
     "kid": "K18",
@@ -3362,7 +4115,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k18-art",
     "variant": 4,
@@ -3377,7 +4130,13 @@
     ],
     "answer": 1,
     "explain": "例外不是说“没有决议也一定有效”，也不是“其他抗辩都不能提”，而是“缺少决议”这一条单独不再足以让公司免责。上市公司不适用第2项、第3项。",
-    "anchor": "担保制度解释第8条"
+    "anchor": "担保制度解释第8条",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "把例外当原则",
+      "范围扩大或缩小"
+    ]
   },
   {
     "kid": "K18",
@@ -3388,7 +4147,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k18-tf",
     "variant": 5,
@@ -3401,7 +4160,13 @@
     ],
     "answer": 0,
     "explain": "例外不是说“没有决议也一定有效”，也不是“其他抗辩都不能提”，而是“缺少决议”这一条单独不再足以让公司免责。上市公司不适用第2项、第3项。 该表述正确。",
-    "anchor": "担保制度解释第8条"
+    "anchor": "担保制度解释第8条",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "把例外当原则",
+      "范围扩大或缩小"
+    ]
   },
   {
     "kid": "K18",
@@ -3412,7 +4177,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k18-case",
     "variant": 6,
@@ -3429,7 +4194,13 @@
     ],
     "answer": 1,
     "explain": "例外不是说“没有决议也一定有效”，也不是“其他抗辩都不能提”，而是“缺少决议”这一条单独不再足以让公司免责。上市公司不适用第2项、第3项。",
-    "anchor": "担保制度解释第8条"
+    "anchor": "担保制度解释第8条",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "把例外当原则",
+      "范围扩大或缩小"
+    ]
   },
   {
     "kid": "K19",
@@ -3440,7 +4211,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k19-art",
     "variant": 4,
@@ -3455,7 +4226,13 @@
     ],
     "answer": 3,
     "explain": "单股东公司为其股东担保时，不能仅以违反担保决议程序为由主张不承担担保责任；若因此无法清偿其他债务，提供担保时的股东不能证明公司财产独立于自己的财产，其他债权人可以请求该股东承担连带责任。",
-    "anchor": "担保制度解释第10条；《公司法》第23条第3款"
+    "anchor": "担保制度解释第10条；《公司法》第23条第3款",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "举证责任方向错误"
+    ]
   },
   {
     "kid": "K19",
@@ -3466,7 +4243,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k19-tf",
     "variant": 5,
@@ -3479,7 +4256,13 @@
     ],
     "answer": 1,
     "explain": "单股东公司为其股东担保时，不能仅以违反担保决议程序为由主张不承担担保责任；若因此无法清偿其他债务，提供担保时的股东不能证明公司财产独立于自己的财产，其他债权人可以请求该股东承担连带责任。 该表述错误，正确表述是：不能仅以程序违法拒担；股东不能证明财产独立则连带",
-    "anchor": "担保制度解释第10条；《公司法》第23条第3款"
+    "anchor": "担保制度解释第10条；《公司法》第23条第3款",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "举证责任方向错误"
+    ]
   },
   {
     "kid": "K19",
@@ -3490,7 +4273,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k19-case",
     "variant": 6,
@@ -3507,7 +4290,13 @@
     ],
     "answer": 1,
     "explain": "单股东公司为其股东担保时，不能仅以违反担保决议程序为由主张不承担担保责任；若因此无法清偿其他债务，提供担保时的股东不能证明公司财产独立于自己的财产，其他债权人可以请求该股东承担连带责任。",
-    "anchor": "担保制度解释第10条；《公司法》第23条第3款"
+    "anchor": "担保制度解释第10条；《公司法》第23条第3款",
+    "part": "第一部分 公司法",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "举证责任方向错误"
+    ]
   },
   {
     "kid": "K20",
@@ -3518,7 +4307,7 @@
     "kind": "专业",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k20-art",
     "variant": 4,
@@ -3533,7 +4322,13 @@
     ],
     "answer": 3,
     "explain": "担保制度解释第11条规定：公司分支机构未经公司股东会或者董事会决议以自己的名义对外提供担保，相对人请求公司或者分支机构承担担保责任的，人民法院不予支持；但相对人不知道且不应当知道未经决议程序的除外。非善意时，可参照解释第17条处理赔偿责任。",
-    "anchor": "《民法典担保制度解释》第11条、第17条"
+    "anchor": "《民法典担保制度解释》第11条、第17条",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "程序错误"
+    ]
   },
   {
     "kid": "K20",
@@ -3544,7 +4339,7 @@
     "kind": "专业",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k20-tf",
     "variant": 5,
@@ -3557,7 +4352,13 @@
     ],
     "answer": 0,
     "explain": "担保制度解释第11条规定：公司分支机构未经公司股东会或者董事会决议以自己的名义对外提供担保，相对人请求公司或者分支机构承担担保责任的，人民法院不予支持；但相对人不知道且不应当知道未经决议程序的除外。非善意时，可参照解释第17条处理赔偿责任。 该表述正确。",
-    "anchor": "《民法典担保制度解释》第11条、第17条"
+    "anchor": "《民法典担保制度解释》第11条、第17条",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "程序错误"
+    ]
   },
   {
     "kid": "K20",
@@ -3568,7 +4369,7 @@
     "kind": "专业",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k20-case",
     "variant": 6,
@@ -3585,7 +4386,13 @@
     ],
     "answer": 1,
     "explain": "担保制度解释第11条规定：公司分支机构未经公司股东会或者董事会决议以自己的名义对外提供担保，相对人请求公司或者分支机构承担担保责任的，人民法院不予支持；但相对人不知道且不应当知道未经决议程序的除外。非善意时，可参照解释第17条处理赔偿责任。",
-    "anchor": "《民法典担保制度解释》第11条、第17条"
+    "anchor": "《民法典担保制度解释》第11条、第17条",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "程序错误"
+    ]
   },
   {
     "kid": "K21",
@@ -3596,7 +4403,7 @@
     "kind": "专业",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k21-art",
     "variant": 4,
@@ -3611,7 +4418,12 @@
     ],
     "answer": 1,
     "explain": "法释〔2024〕15号明确：《公司法》第88条第1款仅适用于2024年7月1日之后发生的未届出资期限股权转让行为。对于2024年7月1日之前的该类转让，人民法院应当根据原公司法等有关法律的规定精神公平公正处理。",
-    "anchor": "法释〔2024〕15号；《公司法》第88条第1款"
+    "anchor": "法释〔2024〕15号；《公司法》第88条第1款",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "新旧法混用"
+    ]
   },
   {
     "kid": "K21",
@@ -3622,7 +4434,7 @@
     "kind": "专业",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k21-tf",
     "variant": 5,
@@ -3635,7 +4447,12 @@
     ],
     "answer": 1,
     "explain": "法释〔2024〕15号明确：《公司法》第88条第1款仅适用于2024年7月1日之后发生的未届出资期限股权转让行为。对于2024年7月1日之前的该类转让，人民法院应当根据原公司法等有关法律的规定精神公平公正处理。 该表述错误，正确表述是：不适用，该款仅适用于2024年7月1日后发生的转让",
-    "anchor": "法释〔2024〕15号；《公司法》第88条第1款"
+    "anchor": "法释〔2024〕15号；《公司法》第88条第1款",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "新旧法混用"
+    ]
   },
   {
     "kid": "K21",
@@ -3646,7 +4463,7 @@
     "kind": "专业",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k21-case",
     "variant": 6,
@@ -3663,7 +4480,12 @@
     ],
     "answer": 1,
     "explain": "法释〔2024〕15号明确：《公司法》第88条第1款仅适用于2024年7月1日之后发生的未届出资期限股权转让行为。对于2024年7月1日之前的该类转让，人民法院应当根据原公司法等有关法律的规定精神公平公正处理。",
-    "anchor": "法释〔2024〕15号；《公司法》第88条第1款"
+    "anchor": "法释〔2024〕15号；《公司法》第88条第1款",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "新旧法混用"
+    ]
   },
   {
     "kid": "K22",
@@ -3674,7 +4496,7 @@
     "kind": "专业",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k22-art",
     "variant": 4,
@@ -3689,7 +4511,13 @@
     ],
     "answer": 1,
     "explain": "《公司法》第54条规定：公司不能清偿到期债务的，公司或者已到期债权的债权人有权要求已认缴出资但未届出资期限的股东提前缴纳出资。",
-    "anchor": "《公司法》第54条"
+    "anchor": "《公司法》第54条",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "条件遗漏",
+      "后果错误"
+    ]
   },
   {
     "kid": "K22",
@@ -3700,7 +4528,7 @@
     "kind": "专业",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k22-tf",
     "variant": 5,
@@ -3713,7 +4541,13 @@
     ],
     "answer": 0,
     "explain": "《公司法》第54条规定：公司不能清偿到期债务的，公司或者已到期债权的债权人有权要求已认缴出资但未届出资期限的股东提前缴纳出资。 该表述正确。",
-    "anchor": "《公司法》第54条"
+    "anchor": "《公司法》第54条",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "条件遗漏",
+      "后果错误"
+    ]
   },
   {
     "kid": "K22",
@@ -3724,7 +4558,7 @@
     "kind": "专业",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k22-case",
     "variant": 6,
@@ -3741,7 +4575,13 @@
     ],
     "answer": 1,
     "explain": "《公司法》第54条规定：公司不能清偿到期债务的，公司或者已到期债权的债权人有权要求已认缴出资但未届出资期限的股东提前缴纳出资。",
-    "anchor": "《公司法》第54条"
+    "anchor": "《公司法》第54条",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "条件遗漏",
+      "后果错误"
+    ]
   },
   {
     "kid": "K23",
@@ -3752,7 +4592,7 @@
     "kind": "专业",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k23-art",
     "variant": 4,
@@ -3767,7 +4607,13 @@
     ],
     "answer": 1,
     "explain": "《公司法》第88条第1款规定：股东转让已认缴出资但未届出资期限的股权的，由受让人承担缴纳该出资的义务；受让人未按期足额缴纳出资的，转让人对受让人未按期缴纳的出资承担补充责任。",
-    "anchor": "《公司法》第88条第1款"
+    "anchor": "《公司法》第88条第1款",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "后果错误"
+    ]
   },
   {
     "kid": "K23",
@@ -3778,7 +4624,7 @@
     "kind": "专业",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k23-tf",
     "variant": 5,
@@ -3791,7 +4637,13 @@
     ],
     "answer": 1,
     "explain": "《公司法》第88条第1款规定：股东转让已认缴出资但未届出资期限的股权的，由受让人承担缴纳该出资的义务；受让人未按期足额缴纳出资的，转让人对受让人未按期缴纳的出资承担补充责任。 该表述错误，正确表述是：由乙承担缴纳义务；甲对未缴部分承担补充责任",
-    "anchor": "《公司法》第88条第1款"
+    "anchor": "《公司法》第88条第1款",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "后果错误"
+    ]
   },
   {
     "kid": "K23",
@@ -3802,7 +4654,7 @@
     "kind": "专业",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k23-case",
     "variant": 6,
@@ -3819,7 +4671,13 @@
     ],
     "answer": 1,
     "explain": "《公司法》第88条第1款规定：股东转让已认缴出资但未届出资期限的股权的，由受让人承担缴纳该出资的义务；受让人未按期足额缴纳出资的，转让人对受让人未按期缴纳的出资承担补充责任。",
-    "anchor": "《公司法》第88条第1款"
+    "anchor": "《公司法》第88条第1款",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "后果错误"
+    ]
   },
   {
     "kid": "K24",
@@ -3830,7 +4688,7 @@
     "kind": "专业",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k24-art",
     "variant": 4,
@@ -3845,7 +4703,13 @@
     ],
     "answer": 2,
     "explain": "《公司法》第88条第2款规定：未按期缴纳出资或非货币财产实际价额显著低于所认缴出资额的股东转让股权的，转让人与受让人在出资不足范围内承担连带责任；受让人不知道且不应当知道存在该情形的，由转让人承担责任。",
-    "anchor": "《公司法》第88条第2款"
+    "anchor": "《公司法》第88条第2款",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "举证责任方向错误"
+    ]
   },
   {
     "kid": "K24",
@@ -3856,7 +4720,7 @@
     "kind": "专业",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k24-tf",
     "variant": 5,
@@ -3869,7 +4733,13 @@
     ],
     "answer": 0,
     "explain": "《公司法》第88条第2款规定：未按期缴纳出资或非货币财产实际价额显著低于所认缴出资额的股东转让股权的，转让人与受让人在出资不足范围内承担连带责任；受让人不知道且不应当知道存在该情形的，由转让人承担责任。 该表述正确。",
-    "anchor": "《公司法》第88条第2款"
+    "anchor": "《公司法》第88条第2款",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "举证责任方向错误"
+    ]
   },
   {
     "kid": "K24",
@@ -3880,7 +4750,7 @@
     "kind": "专业",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k24-case",
     "variant": 6,
@@ -3897,7 +4767,13 @@
     ],
     "answer": 1,
     "explain": "《公司法》第88条第2款规定：未按期缴纳出资或非货币财产实际价额显著低于所认缴出资额的股东转让股权的，转让人与受让人在出资不足范围内承担连带责任；受让人不知道且不应当知道存在该情形的，由转让人承担责任。",
-    "anchor": "《公司法》第88条第2款"
+    "anchor": "《公司法》第88条第2款",
+    "part": "专业专题 现行法与司法解释",
+    "grade": "B",
+    "errorTags": [
+      "主体错位",
+      "举证责任方向错误"
+    ]
   },
   {
     "kid": "K25",
@@ -3908,7 +4784,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k25-art",
     "variant": 4,
@@ -3923,7 +4799,13 @@
     ],
     "answer": 2,
     "explain": "分公司不具有独立法人资格，民事责任由总公司或公司承担；子公司具有独立法人资格，原则上独立承担民事责任。不能说母子公司当然连带，也不能说总分之间是连带。",
-    "anchor": "《公司法》第13条"
+    "anchor": "《公司法》第13条",
+    "part": "综合 责任主体与组织关系",
+    "grade": "补充",
+    "errorTags": [
+      "主体错位",
+      "主体错位"
+    ]
   },
   {
     "kid": "K25",
@@ -3934,7 +4816,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k25-tf",
     "variant": 5,
@@ -3947,7 +4829,13 @@
     ],
     "answer": 1,
     "explain": "分公司不具有独立法人资格，民事责任由总公司或公司承担；子公司具有独立法人资格，原则上独立承担民事责任。不能说母子公司当然连带，也不能说总分之间是连带。 该表述错误，正确表述是：分公司责任由总公司承担，子公司原则上独立担责",
-    "anchor": "《公司法》第13条"
+    "anchor": "《公司法》第13条",
+    "part": "综合 责任主体与组织关系",
+    "grade": "补充",
+    "errorTags": [
+      "主体错位",
+      "主体错位"
+    ]
   },
   {
     "kid": "K25",
@@ -3958,7 +4846,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k25-case",
     "variant": 6,
@@ -3975,7 +4863,13 @@
     ],
     "answer": 1,
     "explain": "分公司不具有独立法人资格，民事责任由总公司或公司承担；子公司具有独立法人资格，原则上独立承担民事责任。不能说母子公司当然连带，也不能说总分之间是连带。",
-    "anchor": "《公司法》第13条"
+    "anchor": "《公司法》第13条",
+    "part": "综合 责任主体与组织关系",
+    "grade": "补充",
+    "errorTags": [
+      "主体错位",
+      "主体错位"
+    ]
   },
   {
     "kid": "K26",
@@ -3986,7 +4880,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k26-art",
     "variant": 4,
@@ -4001,7 +4895,13 @@
     ],
     "answer": 2,
     "explain": "封闭式、开放式是学理分类，不等同于上市、非上市。非上市股份公司也不当然变成人合公司。",
-    "anchor": "第二章：易混对比"
+    "anchor": "第二章：易混对比",
+    "part": "综合 公司分类",
+    "grade": "补充",
+    "errorTags": [
+      "把学理分类当法定类型",
+      "近似术语混用"
+    ]
   },
   {
     "kid": "K26",
@@ -4012,7 +4912,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k26-tf",
     "variant": 5,
@@ -4025,7 +4925,13 @@
     ],
     "answer": 0,
     "explain": "封闭式、开放式是学理分类，不等同于上市、非上市。非上市股份公司也不当然变成人合公司。 该表述正确。",
-    "anchor": "第二章：易混对比"
+    "anchor": "第二章：易混对比",
+    "part": "综合 公司分类",
+    "grade": "补充",
+    "errorTags": [
+      "把学理分类当法定类型",
+      "近似术语混用"
+    ]
   },
   {
     "kid": "K26",
@@ -4036,7 +4942,7 @@
     "kind": "基础",
     "difficulty": 2,
     "sourceStatus": "verified",
-    "bankVersion": "v6",
+    "bankVersion": "v7",
     "trap": "注意区分题干中的责任主体和法条程序。",
     "id": "k26-case",
     "variant": 6,
@@ -4053,6 +4959,12 @@
     ],
     "answer": 2,
     "explain": "封闭式、开放式是学理分类，不等同于上市、非上市。非上市股份公司也不当然变成人合公司。",
-    "anchor": "第二章：易混对比"
+    "anchor": "第二章：易混对比",
+    "part": "综合 公司分类",
+    "grade": "补充",
+    "errorTags": [
+      "把学理分类当法定类型",
+      "近似术语混用"
+    ]
   }
 ]
