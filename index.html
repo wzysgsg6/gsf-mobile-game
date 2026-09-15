@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>公司法·前三章｜知识副本</title>
+<title>公司法·前六章｜知识副本</title>
 <style>
 :root{
   --bg:#0b1020; --panel:#141b31; --panel2:#1c2542; --line:#2f3b62;
@@ -93,6 +93,7 @@ h1 span{color:var(--gold)}
 @media (max-width:760px){.quick-actions{grid-template-columns:1fr 1fr}.segmented{grid-auto-columns:1fr}}
 .mode-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:14px}
 .confidence-hint{font-size:12px;color:var(--muted);line-height:1.6;margin:4px 0 8px}
+.skip-confidence{width:100%;margin-top:6px}
 .break-card{text-align:center;padding:44px 28px}
 .level-big{font-size:clamp(34px,7vw,70px);font-weight:950;color:var(--gold);line-height:1;margin:10px 0 14px}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}
@@ -146,6 +147,16 @@ h1 span{color:var(--gold)}
  .study-controls{display:grid;grid-template-columns:1fr 180px auto auto;gap:10px;align-items:center;margin:16px 0 18px}
 .study-input,.study-select{width:100%;background:#0b1020;color:var(--text);border:1px solid var(--line);border-radius:12px;padding:12px;font:inherit}
 .study-check{color:var(--muted);font-size:13px;white-space:nowrap}
+.study-view{max-width:320px;margin:0 0 14px}
+.study-filters{display:grid;grid-template-columns:1fr 1fr auto;gap:10px;align-items:center;margin:0 0 14px}
+.study-filters .study-select{width:100%}
+.study-chapter{border:1px solid rgba(255,255,255,.09);border-radius:16px;background:rgba(255,255,255,.025);padding:12px;margin-bottom:10px}
+.study-chapter>summary{cursor:pointer;font-weight:800;font-size:15px;line-height:1.6}
+.study-law{border:1px solid rgba(110,168,254,.22);border-radius:12px;background:rgba(110,168,254,.05);padding:10px;margin-top:8px}
+.study-law>summary{cursor:pointer;font-weight:800;color:#dbe7ff;line-height:1.6}
+.study-law-list{display:grid;gap:8px;margin-top:10px}
+.study-law-item{border-top:1px solid rgba(255,255,255,.08);padding-top:8px;color:var(--muted);line-height:1.65;font-size:13px}
+.study-law-item b{color:var(--text)}
 .study-list{display:grid;gap:12px}
 .study-card{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:14px}
 .study-card summary{cursor:pointer;font-weight:800;line-height:1.6}
@@ -196,20 +207,19 @@ h1 span{color:var(--gold)}
 <div class="app">
   <div class="top">
     <div class="brand">商法法考学习 · <b>知识副本</b></div>
-    <div class="top-right"><div class="best" id="bestText">最佳记录：—</div><button class="report-link" id="studyBtn">知识卡</button><button class="report-link" id="exportSaveBtn">导出存档</button><button class="report-link" id="importSaveBtn">导入存档</button><input type="file" id="importSaveFile" accept=".json,application/json" class="hidden"><button class="report-link" id="reportBtn">错题报告</button><button class="report-link" id="restartLink">重开</button><button class="report-link danger" id="cleanCacheLink">彻底重置</button></div>
+    <div class="top-right"><div class="best" id="bestText">最佳记录：—</div><button class="report-link" id="mainMenuBtn">主菜单</button><button class="report-link" id="studyBtn">知识卡</button><button class="report-link" id="exportSaveBtn">导出存档</button><button class="report-link" id="importSaveBtn">导入存档</button><input type="file" id="importSaveFile" accept=".json,application/json" class="hidden"><button class="report-link" id="reportBtn">错题报告</button><button class="report-link" id="restartLink">重开</button><button class="report-link danger" id="cleanCacheLink">彻底重置</button></div>
   </div>
 
   <section class="screen" id="startScreen">
     <div class="hero">
-      <div class="eyebrow">公司法 01—03 · A级主干</div>
-      <h1>把前 3 章做成<br><span>一局知识副本</span></h1>
-      <p class="lead">题库 v7：156 题，覆盖 26 个知识点和四类题型。答错后换表述回炉，之后按 1、3、7、14 天继续复习。</p>
+      <div class="eyebrow">公司法前六章 · 知识副本</div>
+      <p class="lead">公司法前六章已整理为 192 题、43 个知识点和四类题型。答错后换表述回炉，之后按 1、3、7、14 天继续复习。</p>
       <div class="chips">
-        <span class="chip">题库 156 题</span>
-        <span class="chip">26 个知识点</span>
+        <span class="chip">题库 192 题</span>
+        <span class="chip">43 个知识点</span>
         <span class="chip">四类题型</span>
         <span class="chip gold">错题变式回炉</span>
-        <span class="chip green">每人独立本地存档</span>
+        <span class="chip green">纯本地存档</span>
       </div>
       <div class="mode-block">
         <div class="control-label">答题方式</div>
@@ -235,16 +245,19 @@ h1 span{color:var(--gold)}
         <button class="secondary hidden" id="resumeBtn">继续上次进度</button>
       </div>
       <div class="daily-panel">
-        <div class="daily-item"><b id="dailyProgress">0/3</b><span>今日已答</span></div>
-        <div class="daily-item"><b id="streakText">0</b><span>连续天数</span></div>
-        <div class="daily-item"><b id="freezeText">0/2</b><span>冻结卡</span></div>
+        <div class="daily-item"><b id="dailyProgress">0 题</b><span>今日已答</span></div>
+        <div class="daily-item"><b id="streakText">0 天</b><span>连续学习</span></div>
+        <div class="daily-item"><b id="freezeText">0/43</b><span>已掌握知识点</span></div>
       </div>
       <div class="scope">
         <div class="scope-card"><b>① 原则与穿透</b><span>独立人格、股东有限责任、纵向/横向人格否认、单股东公司举证责任。</span></div>
         <div class="scope-card"><b>② 分类与责任</b><span>法定公司类型、有限公司与股份公司、人合/资合、分公司与子公司。</span></div>
         <div class="scope-card"><b>③ 能力与担保</b><span>权利能力起止、超经营范围、一般担保、特殊担保、越权担保与善意。</span></div>
+        <div class="scope-card"><b>④ 设立与出资</b><span>设立与成立、发起人、出资形式、五年缴足、加速到期、失权。</span></div>
+        <div class="scope-card"><b>⑤ 股东资格与权利</b><span>股东名册、代持、利润分配、优先认购、知情权、关联交易。</span></div>
+        <div class="scope-card"><b>⑥ 董监高</b><span>任职资格、忠实勤勉、竞业限制、代表诉讼、责任与责任保险。</span></div>
       </div>
-      <div class="how">玩法：每题只选一个答案。答对获得 XP 与连击；答错扣 1 点生命，并记录到对应知识点。系统会在本局后段换一道同知识点的变式回炉，之后按 1、3、7、14 天周期继续换表述重考；错得越多越优先。键盘 1—4 作答，Enter 继续。</div>
+      <div class="how">玩法：选择顺序或乱序，题量 5/10/15/20。答对获得 XP 与连击；答错扣血并记录知识点，本局后段优先换同知识点的另一题型回炉。把握可填可不填；答完可直接下一题，也可返回上一题回看。之后按 1、3、7、14 天继续复习。</div>
     </div>
   </section>
 
@@ -317,12 +330,22 @@ h1 span{color:var(--gold)}
         <label class="study-check"><input type="checkbox" id="studyWrongOnly"> 只看我错过的知识点</label>
         <button class="secondary" id="studyBackBtn">返回</button>
       </div>
+      <div class="study-filters">
+        <select class="study-select" id="studyGrade"><option value="">全部等级</option><option value="A">A级</option><option value="B">B级</option><option value="补充">补充</option></select>
+        <select class="study-select" id="studyMastery"><option value="">全部掌握度</option><option value="weak">未稳定掌握</option><option value="stable">已稳定掌握</option></select>
+        <label class="study-check"><input type="checkbox" id="studyDueOnly"> 只看今天到期</label>
+      </div>
+      <div class="segmented study-view" id="studyViewSegmented">
+        <button type="button" class="seg-btn active" data-value="points">知识点</button>
+        <button type="button" class="seg-btn" data-value="laws">法条索引</button>
+      </div>
+      <button class="secondary" id="checklistBtn" style="margin:0 0 14px">一页纸清单</button>
       <div class="study-list" id="studyList"></div>
     </div>
   </section>
 
-  <div class="modal hidden" id="reportModal"><div class="modal-card"><h3>错题档案／学习报告</h3><p class="small">复制后发给我，我就能按你的错因继续追问。</p><textarea id="reportText" readonly></textarea><div class="modal-actions"><button class="primary" id="copyReportBtn">复制报告</button><button class="secondary" id="closeReportBtn">关闭</button></div></div></div>
-<div class="footer">公司法第一章—第三章 + 专业专题 · 题库 v7（156 题） · 含法条定位/真假法谚/短案例</div>
+  <div class="modal hidden" id="reportModal"><div class="modal-card"><h3 id="reportTitle">错题档案／学习报告</h3><p class="small">复制后发给我，我就能按你的错因继续追问。</p><textarea id="reportText" readonly></textarea><div class="modal-actions"><button class="primary" id="copyReportBtn">复制报告</button><button class="secondary" id="closeReportBtn">关闭</button></div></div></div>
+<div class="footer">公司法第一章—第六章 + 专业专题 · 题库 v8（192 题） · 含法条定位/真假法谚/短案例</div>
 </div>
 <div class="toast" id="toast"></div>
 <script src="knowledge-points.js"></script>
@@ -332,10 +355,10 @@ const QUESTIONS = window.GSF_QUESTIONS || [];
 const KID_META = window.GSF_KNOWLEDGE_POINTS || {};
 const QUESTION_BY_ID = {};
 QUESTIONS.forEach(function(q){ QUESTION_BY_ID[q.id]=q; });
-const LEVELS = ["第1关","第2关","第3关","专业关","Boss关"];
-const BANK_VERSION = 7;
+const LEVELS = ["第1关","第2关","第3关","第4章","第5章","第6章","专业关","Boss关"];
+const BANK_VERSION = 8;
 const state = {deck:[],index:0,hp:3,xp:0,combo:0,maxCombo:0,correct:0,wrong:[],locked:false,revived:0,levelCorrect:0,repeatCounts:{},mode:"normal",completed:false,formatCursor:0,awaitingConfidence:false,pendingChoice:null,hardResetting:false,answers:{}};
-const studyVariantIndex={}; let studyReturnScreen="startScreen";
+const studyVariantIndex={}; let studyReturnScreen="startScreen"; let studyView="points";
 const $ = function(id){ return document.getElementById(id); };
 const SESSION_KEY="gsf-pre3-session-v2";
 const STATS_KEY="gsf-pre3-stats-v2";
@@ -491,7 +514,7 @@ async function bootstrap(){
   const remote=await remoteLoad();
   if(remote){ hydrateSession(remote); if(!s || (remote.savedAt||0)>(s.savedAt||0)){ s=normalizeSession(remote); try{localStorage.setItem(SESSION_KEY,JSON.stringify(s));}catch(e){} } }
   if(s&&s.bankVersion&&s.bankVersion!==BANK_VERSION){ hydrateSession(s); clearLocalSession(); updateResumeButton(); toast("题库已升级，统计和错题已保留，点击开始新副本"); return; }
-  if(s&&s.deck&&s.deck.length&&!s.completed&&s.index<s.deck.length){ resumeGame(s); } else { updateResumeButton(); }
+  updateResumeButton(); if(s&&s.deck&&s.deck.length&&!s.completed&&s.index<s.deck.length){ toast("检测到未完成进度，可点“继续上次进度”"); }
 }
 function updateResumeButton(){
   const s=readSession(), b=$("resumeBtn"); if(!b) return;
@@ -515,13 +538,13 @@ function recordDailyAnswer(){
   writeProfile(p); return p;
 }
 function dailyRemaining(){ const p=readProfile(); return p.dailyDate===todayKey()?Math.max(0,3-(p.dailyCount||0)):3; }
-function updateDailyPanel(){ const p=readProfile(), remain=dailyRemaining(); if($("dailyProgress")) $("dailyProgress").textContent=(p.dailyDate===todayKey()?(p.dailyCount||0):0)+"/3"; if($("streakText")) $("streakText").textContent=p.streak||0; if($("freezeText")) $("freezeText").textContent=(p.freezeCards||0)+"/2";  }
-function riskDelta(right,confidence){ if(!right&&confidence==="确定") return 3; if(!right&&confidence==="不确定") return 2; if(right&&confidence==="猜的") return 2; if(right&&confidence==="不确定") return 1; return -1; }
+function updateDailyPanel(){ const p=readProfile(), today=p.dailyDate===todayKey()?(p.dailyCount||0):0, total=Object.keys(KID_META).length, mastered=Object.keys(KID_META).filter(function(kid){return isStable(kid);}).length; if($("dailyProgress")) $("dailyProgress").textContent=today+" 题"; if($("streakText")) $("streakText").textContent=(p.streak||0)+" 天"; if($("freezeText")) $("freezeText").textContent=mastered+"/"+total; }
+function riskDelta(right,confidence){ if(confidence==="未标注") return 0; if(!right&&confidence==="确定") return 3; if(!right&&confidence==="不确定") return 2; if(right&&confidence==="猜的") return 2; if(right&&confidence==="不确定") return 1; return -1; }
 function weakScore(kid){ const s=readStats()[kid]; if(!s) return 0; return (s.wrong||0)*100 + (s.seen?(s.wrong/s.seen)*50:0) - (s.correct||0)*3 + (s.riskScore||0)*20; }
 function updateStats(q,right,chosenText,confidence){
-  const all=readStats(); const s=all[q.kid]||{seen:0,correct:0,wrong:0,box:0,topic:q.topic,lastWrongChoice:null,lastReason:null,wrongChoices:[],reasons:{},variantSeen:{},lastQuestionId:null,lastVariant:null,last:0,due:Date.now(),confidenceStats:{确定:0,不确定:0,猜的:0},riskScore:0,fragile:0};
-  s.seen++; s.topic=q.topic; s.lastQuestionId=q.id; s.lastVariant=q.variant||1; s.variantSeen=s.variantSeen||{}; s.formatStats=s.formatStats||{}; s.formatStats[q.format||"choice"]=(s.formatStats[q.format||"choice"]||0)+1; s.variantSeen[q.id]=(s.variantSeen[q.id]||0)+1; s.confidenceStats=s.confidenceStats||{确定:0,不确定:0,猜的:0}; s.confidenceStats[confidence]=(s.confidenceStats[confidence]||0)+1; s.lastConfidence=confidence; s.riskScore=(s.riskScore||0)+riskDelta(right,confidence);
-  if(right){ s.correct++; if(confidence==="确定"){ s.box=Math.min(4,s.box+1); s.due=Date.now()+[0,1,3,7,14,30][s.box]*86400000; } else { s.fragile=(s.fragile||0)+1; s.box=0; s.due=Date.now()+86400000; } }
+  const all=readStats(); const s=all[q.kid]||{seen:0,correct:0,wrong:0,box:0,topic:q.topic,lastWrongChoice:null,lastReason:null,wrongChoices:[],reasons:{},variantSeen:{},lastQuestionId:null,lastVariant:null,last:0,due:Date.now(),confidenceStats:{确定:0,不确定:0,猜的:0,未标注:0},riskScore:0,fragile:0};
+  s.seen++; s.topic=q.topic; s.lastQuestionId=q.id; s.lastVariant=q.variant||1; s.variantSeen=s.variantSeen||{}; const fmt=q.format||"choice"; s.formatStats=s.formatStats||{}; let f=s.formatStats[fmt]; if(typeof f==="number") f={seen:f,correct:0,wrong:0}; f=f||{seen:0,correct:0,wrong:0}; f.seen++; if(right) f.correct++; else f.wrong++; s.formatStats[fmt]=f; s.variantSeen[q.id]=(s.variantSeen[q.id]||0)+1; s.confidenceStats=s.confidenceStats||{确定:0,不确定:0,猜的:0,未标注:0}; s.confidenceStats[confidence]=(s.confidenceStats[confidence]||0)+1; s.lastConfidence=confidence; s.riskScore=(s.riskScore||0)+riskDelta(right,confidence);
+  if(right){ s.correct++; if(confidence==="确定"||confidence==="未标注"){ s.box=Math.min(4,s.box+1); s.due=Date.now()+[0,1,3,7,14,30][s.box]*86400000; } else { s.fragile=(s.fragile||0)+1; s.box=0; s.due=Date.now()+86400000; } }
   else { s.wrong++; s.box=0; s.lastWrongChoice=chosenText||""; if(chosenText && (s.wrongChoices||[]).indexOf(chosenText)<0) s.wrongChoices.push(chosenText); s.due=Date.now()+86400000; }
   s.last=Date.now(); all[q.kid]=s; writeStats(all); return s;
 }
@@ -545,6 +568,15 @@ function pickVariant(kid,opts){
     return Math.random()-0.5;
   });
   return candidates[0]||group[0];
+}
+function pickReplugVariant(kid,wrongFormat,excludeIds){
+  const map={article:["article","choice"],truefalse:["truefalse","choice"],case:["case","choice"],choice:["case","article","truefalse"]}; const targets=map[wrongFormat]||["choice","article","truefalse","case"];
+  let pool=QUESTIONS.filter(function(q){return q.kid===kid&&targets.indexOf(q.format||"choice")>=0&&(!excludeIds||excludeIds.indexOf(q.id)<0);});
+  if(!pool.length) pool=QUESTIONS.filter(function(q){return q.kid===kid&&(!excludeIds||excludeIds.indexOf(q.id)<0);});
+  if(!pool.length) return pickVariant(kid,{preferDifferent:true});
+  const st=readStats()[kid]||{}, fs=st.formatStats||{};
+  pool.sort(function(a,b){ const as=(fs[a.format||"choice"]&&fs[a.format||"choice"].seen)||0, bs=(fs[b.format||"choice"]&&fs[b.format||"choice"].seen)||0; if(as!==bs) return as-bs; return (a.difficulty||1)-(b.difficulty||1); });
+  return pool[0];
 }
 function bossKids(){ return ["K14","K16","K18","K19","K20","K21","K22","K23","K24","K25","K26"].slice().sort(function(a,b){return priority(b)-priority(a);}).slice(0,6); }
 function formatSampler(count){
@@ -580,11 +612,11 @@ function updateWrongButton(){ const n=readWrongKids().filter(function(k){return 
 function updateDueButton(){ const n=dueCount(), b=$("dueOnlyBtn"); if(!b) return; b.textContent=n?("今日到期复习（"+n+"）"):"今日到期复习"; b.disabled=n===0; b.classList.toggle("hidden",n===0); }
 function updateHud(){
   if(!state.deck.length) return; const q=state.deck[state.index], st=readStats()[q.kid];
-  $("levelText").textContent=q.level; $("hpText").textContent=state.hp>0?"♥".repeat(state.hp):"—"; $("comboText").textContent="x"+state.combo; $("xpText").textContent=state.xp+" XP"; $("questionNo").textContent="第 "+(state.index+1)+" / "+state.deck.length+" 题";
+  $("levelText").textContent=q.level; $("hpText").textContent=state.hp>0?"♥".repeat(state.hp):"—"; $("comboText").textContent="x"+state.combo; $("xpText").textContent="Lv."+(Math.floor(state.xp/500)+1)+" · "+state.xp+" XP"; $("questionNo").textContent="第 "+(state.index+1)+" / "+state.deck.length+" 题";
   $("chapterText").textContent=(st&&st.wrong>0?"错题知识点 · ":"")+(q.formatLabel?q.formatLabel+" · ":"")+q.topic+(q.replug?" · 变式回炉":""); $("progressBar").style.width=((state.index)/state.deck.length*100)+"%";
 }
 function updateNav(){
-  const q=state.deck[state.index]; const answered=!!(q&&state.answers[q.uid]);
+  const q=state.deck[state.index]; const answered=!!(q&&state.answers[q.uid])||!!(state.awaitingConfidence&&state.pendingChoice!==null);
   $("prevBtn").disabled=state.index===0;
   $("nextBtn").disabled=!answered;
   $("nextBtn").textContent=state.index===state.deck.length-1?"完成结算 →":"下一题 →";
@@ -604,17 +636,18 @@ function choose(i){
   const buttons=Array.from(document.querySelectorAll(".option")); buttons.forEach(function(btn,j){ btn.disabled=false; btn.classList.toggle("selected",j===i); });
   let row=$("options").querySelector(".confidence-row");
   if(!row){ row=document.createElement("div"); row.className="confidence-row"; row.innerHTML='<div class="reason-title">还可以改选项；最后选你的把握，选完才揭晓。</div><div class="confidence-hint">确定 x1.2：答对 XP 更高，答错风险最高；不确定 x1.0；猜的 x0.8，猜对也按掌握不稳进入复习。</div>'; [["确定",1.2,"Q"],["不确定",1.0,"W"],["猜的",0.8,"E"]].forEach(function(pair){ const b=document.createElement("button"); b.className="confidence-btn"; b.textContent=pair[0]+"（"+pair[2]+" / x"+pair[1]+"）"; b.addEventListener("click",function(){toast("已选把握："+pair[0]);resolveAnswer(state.pendingChoice,pair[0],pair[1]);}); row.appendChild(b); }); $("options").appendChild(row); }
+  updateNav();
 }
 function resolveAnswer(i,confidence,multiplier){
   state.locked=true; state.awaitingConfidence=false; state.pendingChoice=null; const q=state.deck[state.index], right=i===q.answer, delta=riskDelta(right,confidence); if(navigator.vibrate) navigator.vibrate(right?25:[40,30,40]);
   const buttons=Array.from(document.querySelectorAll(".option")); buttons.forEach(function(btn,j){ btn.disabled=true; if(j===q.answer) btn.classList.add("correct"); if(j===i&&!right) btn.classList.add("wrong"); if(j!==q.answer&&j!==i) btn.classList.add("dim"); });
   let extra="", xpGain=0; const learned=updateStats(q,right,q.options[i],confidence); recordDailyAnswer();
-  if(right){ if(confidence==="确定") markRightKid(q.kid); else { markWrongKid(q.kid); extra+='<br><br><b>掌握不稳：</b>虽然答对，但你的把握不是“确定”，系统会继续安排二次复习。'; } state.correct++; state.levelCorrect++; state.combo++; state.maxCombo=Math.max(state.maxCombo,state.combo); xpGain=Math.round((100+Math.max(0,state.combo-1)*20)*multiplier); state.xp+=xpGain; }
+  if(right){ if(confidence==="确定") markRightKid(q.kid); else if(confidence!=="未标注"){ markWrongKid(q.kid); extra+='<br><br><b>掌握不稳：</b>虽然答对，但你的把握不是“确定”，系统会继续安排二次复习。'; } state.correct++; state.levelCorrect++; state.combo++; state.maxCombo=Math.max(state.maxCombo,state.combo); const oldLevel=Math.floor(state.xp/500)+1; xpGain=Math.round((100+Math.max(0,state.combo-1)*20)*multiplier); state.xp+=xpGain; if([3,5,10,20].indexOf(state.combo)>=0){ state.xp+=50; xpGain+=50; extra+='<br><br><b>连击 x'+state.combo+'，奖励 +50 XP</b>'; } const newLevel=Math.floor(state.xp/500)+1; if(newLevel>oldLevel){ extra+='<br><b>升级：Lv.'+newLevel+'</b>'; toast("升级到 Lv."+newLevel); } }
   else {
     markWrongKid(q.kid); state.wrong.push({question:q,chosen:i,confidence:confidence}); state.combo=0; state.hp--; if(confidence==="确定") extra+='<br><br><b>高危错题：</b>你原本很确定，系统会优先回炉。'; else if(confidence==="不确定") extra+='<br><br><b>半掌握错题：</b>方向不稳，进入二次复习。'; else extra+='<br><br><b>猜测错题：</b>先补概念和要件，再打回炉题。';
     if(state.hp<=0){ state.hp=1; state.revived++; state.xp=Math.max(0,state.xp-50); extra+='<br><br><b>复活触发：</b>先读完解析，再用同一知识点打回去。已扣 50 XP。'; }
     const count=state.repeatCounts[q.kid]||0;
-    if(count<2){ state.repeatCounts[q.kid]=count+1; const alt=pickVariant(q.kid,{preferDifferent:true,excludeIds:state.deck.map(function(x){return x.id;})}); const fmt=chooseFormat(alt,q.format); const at=Math.min(state.deck.length,state.index+4); state.deck.splice(at,0,prepare(Object.assign({},alt,{level:q.level,replug:true}),fmt)); extra+='<br><br><span class="anchor">回炉：后段会换一道同知识点的变式再考一次。</span>'; toast("已加入变式回炉"); }
+    if(count<2){ state.repeatCounts[q.kid]=count+1; const alt=pickReplugVariant(q.kid,q.format,state.deck.map(function(x){return x.id;})); const fmt=alt.format||chooseFormat(alt,q.format); const at=Math.min(state.deck.length,state.index+4); state.deck.splice(at,0,prepare(Object.assign({},alt,{level:q.level,replug:true}),fmt)); extra+='<br><br><span class="anchor">回炉：优先换一道'+(FORMAT_LABELS[fmt]||"同知识点")+'题再考一次。</span>'; toast("已加入变式回炉"); }
   }
   const effect=(right?("XP +"+xpGain):("风险分 +"+delta))+" · 把握倍率 x"+multiplier+" · 本知识点风险分 "+(learned.riskScore||0);
   const feedbackHtml='<b>'+(right?"命中":"扣 1 点生命")+' · 把握：'+confidence+'</b><br>'+q.explain+extra+'<br><span class="anchor">'+effect+'</span><br><span class="anchor">法条锚点：'+q.anchor+'</span><br><span class="anchor">下次复习：'+nextReviewLabel(learned)+'</span>';
@@ -624,13 +657,13 @@ function resolveAnswer(i,confidence,multiplier){
   updateHud(); updateNav();
 }
 function next(){
-  const q=state.deck[state.index]; if(!q||!state.answers[q.uid]) return;
+  const q=state.deck[state.index]; if(!q) return; if(state.awaitingConfidence&&state.pendingChoice!==null){ resolveAnswer(state.pendingChoice,"未标注",1.0); } if(!state.answers[q.uid]) return;
   if(state.index>=state.deck.length-1){ state.completed=true; saveSession(); renderResult(); return; }
   state.index++; saveSession(); const prev=state.deck[state.index-1], cur=state.deck[state.index];
   if(cur.level!==prev.level){ show("breakScreen"); $("breakTitle").textContent=prev.level+" 清空"; $("breakEyebrow").textContent=prev.level==="Boss关"?"FINAL CLEAR":"LEVEL CLEAR"; $("breakCopy").textContent=prev.level==="Boss关"?"Boss已击破，进入结算。":"下一关继续换不同表述检索同一批知识点。"; $("breakCorrect").textContent=state.levelCorrect; $("breakHp").textContent="♥".repeat(state.hp); $("breakCombo").textContent="x"+state.maxCombo; state.levelCorrect=0; return; }
   renderQuestion();
 }
-function prev(){ if(state.index>0){ state.index--; saveSession(); renderQuestion(); } }
+function prev(){ if(state.index>0){ const q=state.deck[state.index]; if(state.awaitingConfidence&&state.pendingChoice!==null){ resolveAnswer(state.pendingChoice,"未标注",1.0); } state.index--; saveSession(); renderQuestion(); } }
 function startGame(mode,count){
   const deck=buildDeck(mode,count); if(!deck.length){ toast(mode==="wrong"?"暂时没有错题知识点":(mode==="due"?"今天没有到期复习":"题库为空")); return; }
   state.deck=deck; state.index=0; state.hp=3; state.xp=0; state.combo=0; state.maxCombo=0; state.correct=0; state.wrong=[]; state.locked=false; state.revived=0; state.levelCorrect=0; state.repeatCounts={}; state.mode=mode||"normal"; state.completed=false; state.answers={}; state.formatCursor=0; state.awaitingConfidence=false; state.pendingChoice=null; try{localStorage.removeItem(RESET_KEY);}catch(e){} saveSession(); show("gameScreen"); renderQuestion();
@@ -638,7 +671,7 @@ function startGame(mode,count){
 function renderResult(){
   state.completed=true; show("resultScreen"); $("progressBar").style.width="100%"; const total=state.deck.length, rate=total?state.correct/total:0; let rank="C";
   if(rate>=0.96&&state.hp===3) rank="S"; else if(rate>=0.88&&state.hp>=2) rank="A"; else if(rate>=0.72) rank="B";
-  $("rankText").textContent=rank; $("rankCopy").textContent="正确率 "+Math.round(rate*100)+"% · 复活 "+state.revived+" 次。当前题库 v4：26 个知识点 × 3 个变式。"; $("finalCorrect").textContent=state.correct+"/"+total; $("finalCombo").textContent="x"+state.maxCombo; $("finalXp").textContent=state.xp;
+  $("rankText").textContent=rank; $("rankCopy").textContent="正确率 "+Math.round(rate*100)+"% · 复活 "+state.revived+" 次。当前题库 v8：43 个知识点。"; $("finalCorrect").textContent=state.correct+"/"+total; $("finalCombo").textContent="x"+state.maxCombo; $("finalXp").textContent=state.xp;
   const allStats=readStats(), topics={}, chapters={}, reasons={};
   Object.keys(allStats).forEach(function(kid){ const s=allStats[kid], meta=KID_META[kid]||{}; if(s.wrong>0){ if(!topics[s.topic]) topics[s.topic]={topic:s.topic,wrong:0,seen:0,due:s.due}; topics[s.topic].wrong+=s.wrong; topics[s.topic].seen+=s.seen; topics[s.topic].due=Math.min(topics[s.topic].due||s.due,s.due||s.due); if(meta.chapter){ if(!chapters[meta.chapter]) chapters[meta.chapter]={chapter:meta.chapter,wrong:0,seen:0}; chapters[meta.chapter].wrong+=s.wrong; chapters[meta.chapter].seen+=s.seen; } } Object.keys(s.reasons||{}).forEach(function(r){ reasons[r]=(reasons[r]||0)+s.reasons[r]; }); });
   const topTopics=Object.keys(topics).map(function(k){return topics[k];}).sort(function(a,b){return b.wrong-a.wrong||b.wrong/b.seen-a.wrong/a.seen;}).slice(0,3);
@@ -664,7 +697,7 @@ $("nextBtn").addEventListener("click",next);
 $("continueBtn").addEventListener("click",function(){saveSession();show("gameScreen");renderQuestion();});
 $("restartBtn").addEventListener("click",function(){clearLocalSession();startGame("normal");});
 $("retryWrongBtn").addEventListener("click",function(){clearLocalSession();retryWrong();});
-$("resumeBtn").addEventListener("click",resumeGame);
+$("resumeBtn").addEventListener("click",function(){resumeGame();});
 document.addEventListener("keydown",function(e){ const k=e.key.toLowerCase(); if(!$("gameScreen").classList.contains("hidden")&&state.awaitingConfidence&&["q","w","e"].includes(k)){ const b=$("options").querySelectorAll(".confidence-btn")[k==="q"?0:(k==="w"?1:2)]; if(b) b.click(); return; } if(!$("gameScreen").classList.contains("hidden")&&!state.locked&&["1","2","3","4"].includes(e.key)) choose(Number(e.key)-1); if(e.key==="ArrowLeft") prev(); if(e.key==="ArrowRight"&&!$("nextBtn").disabled) next(); if(e.key==="Enter"&&!$("nextBtn").disabled) next(); if(e.key==="Enter"&&!$("continueBtn").closest(".screen").classList.contains("hidden")) $("continueBtn").click(); });
 bootstrap();
 document.addEventListener("visibilitychange",function(){let r=false;try{r=localStorage.getItem(RESET_KEY)==="1";}catch(e){} if(!state.hardResetting&&!r&&document.visibilityState==="hidden"&&!$("gameScreen").classList.contains("hidden"))saveSession();});
@@ -672,12 +705,29 @@ window.addEventListener("beforeunload",function(){let r=false;try{r=localStorage
 function populateStudyChapters(){ const sel=$("studyChapter"); if(!sel||sel.options.length>1) return; unique(Object.keys(KID_META).map(function(k){return KID_META[k].chapter;})).forEach(function(ch){ const o=document.createElement("option"); o.value=ch; o.textContent=ch; sel.appendChild(o); }); }
 function openStudy(){ studyReturnScreen=!$("gameScreen").classList.contains("hidden")?"gameScreen":"startScreen"; populateStudyChapters(); renderStudy(); show("studyScreen"); }
 function closeStudy(){ show(studyReturnScreen); }
+function stableFormatCount(kid){ const s=readStats()[kid],fs=s&&s.formatStats?s.formatStats:{}, formats=["choice","article","truefalse","case"]; let n=0; formats.forEach(function(f){ const x=fs[f]; if(x&&x.seen>=2&&x.correct>=2&&x.wrong===0) n++; }); return n; }
+function formatMasteryText(kid){ const s=readStats()[kid],fs=s&&s.formatStats?s.formatStats:{}, labels={choice:"选择",article:"法条",truefalse:"真假",case:"案例"}, out=[]; ["choice","article","truefalse","case"].forEach(function(f){ const x=fs[f]; if(!x||!x.seen) return; const rate=x.correct/x.seen; out.push(labels[f]+"："+(rate>=0.8&&x.wrong<=1?"★":"☆")); }); return out.join(" "); }
+function isStable(kid){ return stableFormatCount(kid)>=2; }
+function masteryStars(kid){ const n=stableFormatCount(kid); if(n>=3) return "★★★"; if(n===2) return "★★☆"; if(n===1) return "★☆☆"; return "☆☆☆"; }
 function renderStudy(){
-  const query=($("studySearch").value||"").trim().toLowerCase(), chapter=$("studyChapter").value, wrongOnly=$("studyWrongOnly").checked, wrongKids=readWrongKids(), stats=readStats();
-  const kids=Object.keys(KID_META).filter(function(kid){ const meta=KID_META[kid]; if(chapter&&meta.chapter!==chapter) return false; if(wrongOnly&&wrongKids.indexOf(kid)<0&&!(stats[kid]&&stats[kid].wrong>0)) return false; const variants=QUESTIONS.filter(function(q){return q.kid===kid;}); if(!variants.length) return false; if(query){ const hay=(meta.topic+" "+meta.chapter+" "+variants.map(function(v){return v.q+" "+v.explain+" "+v.anchor;}).join(" ")).toLowerCase(); if(hay.indexOf(query)<0) return false; } return true; });
+  const query=($("studySearch").value||"").trim().toLowerCase(), chapter=$("studyChapter").value, wrongOnly=$("studyWrongOnly").checked, grade=$("studyGrade").value, mastery=$("studyMastery").value, dueOnly=$("studyDueOnly").checked, wrongKids=readWrongKids(), stats=readStats();
+  const kids=Object.keys(KID_META).filter(function(kid){ const meta=KID_META[kid]; if(chapter&&meta.chapter!==chapter) return false; if(grade&&meta.grade!==grade) return false; if(wrongOnly&&wrongKids.indexOf(kid)<0&&!(stats[kid]&&stats[kid].wrong>0)) return false; const stable=isStable(kid); if(mastery==="stable"&&!stable) return false; if(mastery==="weak"&&stable) return false; if(dueOnly&&!(stats[kid]&&stats[kid].due&&stats[kid].due<=Date.now())) return false; const variants=QUESTIONS.filter(function(q){return q.kid===kid;}); if(!variants.length) return false; if(query){ const hay=(meta.topic+" "+meta.chapter+" "+variants.map(function(v){return v.q+" "+v.explain+" "+v.anchor;}).join(" ")).toLowerCase(); if(hay.indexOf(query)<0) return false; } return true; });
   const list=$("studyList"); list.innerHTML="";
   if(!kids.length){ list.innerHTML='<div class="study-empty">没有匹配的知识点</div>'; return; }
-  kids.forEach(function(kid){ const meta=KID_META[kid], variants=QUESTIONS.filter(function(q){return q.kid===kid;}), idx=(studyVariantIndex[kid]||0)%variants.length, q=variants[idx]; const details=document.createElement("details"); details.className="study-card"; details.innerHTML='<summary>'+escapeHtml(meta.topic)+'</summary><div class="study-meta"><span class="study-tag">'+escapeHtml(meta.grade||"")+'级</span><span class="study-tag">'+escapeHtml(meta.chapter)+'</span><span class="study-tag">'+escapeHtml(q.kind||"")+'</span><span class="study-tag">变式 '+(idx+1)+'/'+variants.length+'</span></div><div class="study-explain"><b>核心：</b>'+escapeHtml(meta.core||"")+'</div><div class="study-q">'+escapeHtml(q.q)+'</div><div class="study-answer">正确答案：'+escapeHtml(q.options[q.answer])+'</div><div class="study-explain">'+escapeHtml(q.explain)+'</div><span class="anchor">'+escapeHtml(q.anchor)+'</span>'; const wrap=document.createElement("div"); const btn=document.createElement("button"); btn.className="secondary"; btn.textContent="换一题"; btn.style.marginTop="10px"; btn.addEventListener("click",function(e){e.preventDefault();studyVariantIndex[kid]=(idx+1)%variants.length;renderStudy();}); wrap.appendChild(btn); details.appendChild(wrap); list.appendChild(details); });
+  const byChapter={}; kids.forEach(function(kid){ const ch=KID_META[kid].chapter; (byChapter[ch]=byChapter[ch]||[]).push(kid); });
+  if(studyView==="laws"){
+    Object.keys(byChapter).forEach(function(ch){ const anchorMap={}; byChapter[ch].forEach(function(kid){ QUESTIONS.filter(function(q){return q.kid===kid;}).forEach(function(q){ if(!q.anchor) return; if(!anchorMap[q.anchor]) anchorMap[q.anchor]={anchor:q.anchor,items:[]}; anchorMap[q.anchor].items.push({kid:kid,meta:KID_META[kid],q:q}); }); }); const sec=document.createElement("details"); sec.className="study-chapter"; sec.open=chapter===ch; const sum=document.createElement("summary"); sum.textContent=ch+"（"+Object.keys(anchorMap).length+" 组法条）"; sec.appendChild(sum); Object.keys(anchorMap).sort().forEach(function(anchor){ const d=document.createElement("details"); d.className="study-law"; const s2=document.createElement("summary"); s2.textContent=anchor+"（"+anchorMap[anchor].items.length+"）"; d.appendChild(s2); const box=document.createElement("div"); box.className="study-law-list"; anchorMap[anchor].items.slice(0,8).forEach(function(item){ const div=document.createElement("div"); div.className="study-law-item"; div.innerHTML='<b>'+escapeHtml(item.meta.topic)+'</b><br>'+escapeHtml(item.q.q.slice(0,140)); box.appendChild(div); }); d.appendChild(box); sec.appendChild(d); }); list.appendChild(sec); });
+    return;
+  }
+  Object.keys(byChapter).forEach(function(ch){ const sec=document.createElement("details"); sec.className="study-chapter"; sec.open=chapter===ch; const sum=document.createElement("summary"); sum.textContent=ch+"（"+byChapter[ch].length+" 个知识点）"; sec.appendChild(sum); byChapter[ch].forEach(function(kid){ const meta=KID_META[kid], variants=QUESTIONS.filter(function(q){return q.kid===kid;}), idx=(studyVariantIndex[kid]||0)%variants.length, q=variants[idx]; const details=document.createElement("details"); details.className="study-card"; details.innerHTML='<summary>'+escapeHtml(meta.topic)+'</summary><div class="study-meta"><span class="study-tag">'+escapeHtml(meta.grade||"")+'级</span><span class="study-tag">掌握 '+masteryStars(kid)+'</span><span class="study-tag">'+escapeHtml(q.kind||"")+'</span><span class="study-tag">变式 '+(idx+1)+'/'+variants.length+'</span></div><div class="study-explain"><b>核心：</b>'+escapeHtml(meta.core||"")+'</div><div class="study-explain">掌握明细：'+escapeHtml(formatMasteryText(kid))+'</div><div class="study-q">'+escapeHtml(q.q)+'</div><div class="study-answer">正确答案：'+escapeHtml(q.options[q.answer])+'</div><div class="study-explain">'+escapeHtml(q.explain)+'</div><span class="anchor">'+escapeHtml(q.anchor)+'</span>'; const wrap=document.createElement("div"); const btn=document.createElement("button"); btn.className="secondary"; btn.textContent="换一题"; btn.style.marginTop="10px"; btn.addEventListener("click",function(e){e.preventDefault();studyVariantIndex[kid]=(idx+1)%variants.length;renderStudy();}); wrap.appendChild(btn); details.appendChild(wrap); sec.appendChild(details); }); list.appendChild(sec); });
+}
+function buildOnePageChecklist(){
+  const all=readStats(), arr=Object.keys(all).map(function(kid){return Object.assign({kid:kid},all[kid]);}).filter(function(s){return s.wrong>0;}).sort(function(a,b){return b.wrong-a.wrong||b.wrong/b.seen-a.wrong/a.seen;}).slice(0,5), due=Object.keys(all).filter(function(kid){return all[kid].due&&all[kid].due<=Date.now();});
+  const lines=["# 公司法前六章｜一页纸考前清单","生成时间："+new Date().toLocaleString(),"","## 最弱 5 个知识点"];
+  if(arr.length) arr.forEach(function(s,i){ const meta=KID_META[s.kid]||{}; lines.push((i+1)+". "+meta.topic+"（错 "+s.wrong+"/"+s.seen+"）"); lines.push("   法条："+(meta.anchors||[]).join("；")); lines.push("   最近错因："+(s.lastReason||"未标注")+"｜最近错选："+(s.lastWrongChoice||"无")+"｜下次复习："+nextReviewLabel(s)); }); else lines.push("暂无错题记录");
+  lines.push("","## 今天到期"); if(due.length) due.forEach(function(kid){ const meta=KID_META[kid]||{}; lines.push("- "+meta.topic+"："+nextReviewLabel(all[kid])); }); else lines.push("- 暂无");
+  lines.push("","## 建议顺序","1. 先看法条锚点和最近错因","2. 用 Study Mode 只看未稳定掌握","3. 再做对应知识点的另一题型");
+  return lines.join("\n");
 }
 function exportSave(){
   const data={kind:"gsf-mobile-save",version:1,exportedAt:new Date().toISOString(),session:readSession(),stats:readStats(),wrongKids:readWrongKids(),profile:readProfile(),best:localStorage.getItem("gsf-pre3-best")||""};
@@ -695,13 +745,19 @@ function buildReport(){
   lines.push("","## 题目变式明细"); QUESTIONS.forEach(function(q){ const s=all[q.kid]; if(s&&s.variantSeen&&s.variantSeen[q.id]) lines.push("- ["+q.kid+"-v"+q.variant+"] "+q.topic+"｜做过 "+s.variantSeen[q.id]+" 次｜"+q.q); });
   return lines.join("\n");
 }
+$("mainMenuBtn").addEventListener("click",function(){ if(!$("gameScreen").classList.contains("hidden")) saveSession(); show("startScreen"); refreshBest(); updateResumeButton(); });
 $("studyBtn").addEventListener("click",openStudy);
 $("studyStartBtn").addEventListener("click",openStudy);
 $("studyBackBtn").addEventListener("click",closeStudy);
+Array.from($("studyViewSegmented").querySelectorAll(".seg-btn")).forEach(function(b){ b.addEventListener("click",function(){setActiveSegment("studyViewSegmented",b);studyView=b.dataset.value;renderStudy();}); });
 $("studySearch").addEventListener("input",renderStudy);
+$("studyGrade").addEventListener("change",renderStudy);
+$("studyMastery").addEventListener("change",renderStudy);
+$("studyDueOnly").addEventListener("change",renderStudy);
 $("studyChapter").addEventListener("change",renderStudy);
 $("studyWrongOnly").addEventListener("change",renderStudy);
-$("reportBtn").addEventListener("click",function(){$("reportText").value=buildReport();$("reportModal").classList.remove("hidden");});
+$("reportBtn").addEventListener("click",function(){$("reportTitle").textContent="错题档案／学习报告";$("reportText").value=buildReport();$("reportModal").classList.remove("hidden");});
+$("checklistBtn").addEventListener("click",function(){$("reportTitle").textContent="一页纸清单";$("reportText").value=buildOnePageChecklist();$("reportModal").classList.remove("hidden");});
 $("closeReportBtn").addEventListener("click",function(){$("reportModal").classList.add("hidden");});
 $("copyReportBtn").addEventListener("click",function(){const t=$("reportText");t.select();t.setSelectionRange(0,999999);if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.value).then(function(){toast("报告已复制");});}else{document.execCommand("copy");toast("报告已复制");}});
 $("restartLink").addEventListener("click",function(){if(confirm("确定清空当前进度并重新开始？错题统计会保留。")){restartSession();}});
