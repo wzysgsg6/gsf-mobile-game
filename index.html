@@ -234,10 +234,10 @@ h1 span{color:var(--gold)}
   <section class="screen" id="startScreen">
     <div class="hero">
       <div class="eyebrow">公司法前六章 · 知识副本</div>
-      <p class="lead">公司法前六章已整理为 192 题、43 个知识点和四类题型。答错后换表述回炉，之后按 1、3、7、14 天继续复习。</p>
+      <p class="lead">公司法前六章已整理为 <span id="leadQ">191</span> 题、<span id="leadK">43</span> 个知识点和四类题型。答错后换表述回炉，之后按 1、3、7、14 天继续复习。</p>
       <div class="chips">
-        <span class="chip">题库 192 题</span>
-        <span class="chip">43 个知识点</span>
+        <span class="chip">题库 <span id="chipQ">191</span> 题</span>
+        <span class="chip"><span id="chipK">43</span> 个知识点</span>
         <span class="chip">四类题型</span>
         <span class="chip gold">错题变式回炉</span>
         <span class="chip green">纯本地存档</span>
@@ -247,6 +247,16 @@ h1 span{color:var(--gold)}
         <div class="segmented" id="modeSegmented">
           <button type="button" class="seg-btn active" data-value="sequential">顺序答题</button>
           <button type="button" class="seg-btn" data-value="random">乱序答题</button>
+          <button type="button" class="seg-btn" data-value="chapter">按章节答题</button>
+        </div>
+        <div id="chapterGroup" class="hidden">
+          <div class="control-label" style="margin-top:14px">选择章节</div>
+          <select class="study-select" id="chapterSelect"></select>
+          <div class="control-label" style="margin-top:14px">章节内答题方式</div>
+          <div class="segmented" id="chapterOrderSegmented">
+            <button type="button" class="seg-btn active" data-value="sequential">顺序</button>
+            <button type="button" class="seg-btn" data-value="random">乱序</button>
+          </div>
         </div>
         <div id="countGroup">
           <div class="control-label" style="margin-top:14px">题目数量</div>
@@ -374,8 +384,8 @@ h1 span{color:var(--gold)}
 <div class="footer">公司法第一章—第六章 + 专业专题 · 题库 v8（192 题） · 含法条定位/真假法谚/短案例</div>
 </div>
 <div class="toast" id="toast"></div>
-<script src="knowledge-points.js?v=40"></script>
-<script src="questions.js?v=40"></script>
+<script src="knowledge-points.js?v=41"></script>
+<script src="questions.js?v=41"></script>
 <script>
 const QUESTIONS = window.GSF_QUESTIONS || [];
 const KID_META = window.GSF_KNOWLEDGE_POINTS || {};
@@ -383,7 +393,7 @@ const QUESTION_BY_ID = {};
 QUESTIONS.forEach(function(q){ QUESTION_BY_ID[q.id]=q; });
 const LEVELS = ["第1关","第2关","第3关","第4章","第5章","第6章","专业关","Boss关"];
 const BANK_VERSION = 8;
-const state = {deck:[],index:0,hp:3,xp:0,combo:0,maxCombo:0,correct:0,wrong:[],locked:false,revived:0,levelCorrect:0,repeatCounts:{},mode:"normal",completed:false,formatCursor:0,awaitingConfidence:false,pendingChoice:null,hardResetting:false,answers:{},requestedCount:null};
+const state = {deck:[],index:0,hp:3,xp:0,combo:0,maxCombo:0,correct:0,wrong:[],locked:false,revived:0,levelCorrect:0,repeatCounts:{},mode:"normal",completed:false,formatCursor:0,awaitingConfidence:false,pendingChoice:null,hardResetting:false,answers:{},requestedCount:null,chapter:null,chapterOrder:"sequential"};
 const studyVariantIndex={}; let studyReturnScreen="startScreen"; let studyView="points";
 const $ = function(id){ return document.getElementById(id); };
 const SESSION_KEY="gsf-pre3-session-v2";
@@ -504,7 +514,7 @@ function normalizeSession(s){
 }
 function saveSession(){
   if(state.hardResetting||!state.deck.length) return;
-  const data={v:SAVE_VERSION,schemaVersion:3,bankVersion:BANK_VERSION,completed:!!state.completed,deck:state.deck,index:state.index,hp:state.hp,xp:state.xp,combo:state.combo,maxCombo:state.maxCombo,correct:state.correct,wrong:state.wrong,revived:state.revived,levelCorrect:state.levelCorrect,repeatCounts:state.repeatCounts,mode:state.mode,requestedCount:state.requestedCount,answers:state.answers,stats:readStats(),wrongKids:readWrongKids(),profile:readProfile(),savedAt:Date.now()};
+  const data={v:SAVE_VERSION,schemaVersion:3,bankVersion:BANK_VERSION,completed:!!state.completed,deck:state.deck,index:state.index,hp:state.hp,xp:state.xp,combo:state.combo,maxCombo:state.maxCombo,correct:state.correct,wrong:state.wrong,revived:state.revived,levelCorrect:state.levelCorrect,repeatCounts:state.repeatCounts,mode:state.mode,requestedCount:state.requestedCount,chapter:state.chapter,chapterOrder:state.chapterOrder,answers:state.answers,stats:readStats(),wrongKids:readWrongKids(),profile:readProfile(),savedAt:Date.now()};
   try{ localStorage.setItem(SESSION_KEY,JSON.stringify(data)); }catch(e){}
   remoteSave(data);
 }
@@ -518,10 +528,7 @@ async function hardResetAll(){
   try{ localStorage.clear(); localStorage.setItem(RESET_KEY,"1"); }catch(e){}
   try{ sessionStorage.clear(); }catch(e){}
   try{ if("caches" in window){ caches.keys().then(function(keys){return Promise.all(keys.map(function(k){return caches.delete(k);}));}).catch(function(){}); } }catch(e){}
-  try{ $("exportSaveBtn").addEventListener("click",exportSave);
-$("importSaveBtn").addEventListener("click",function(){$("importSaveFile").click();});
-$("importSaveFile").addEventListener("change",function(){if(this.files&&this.files[0])importSaveFile(this.files[0]);this.value="";});
-if("serviceWorker" in navigator){ navigator.serviceWorker.getRegistrations().then(function(regs){return Promise.all(regs.map(function(r){return r.unregister();}));}).catch(function(){}); } }catch(e){}
+  try{ if("serviceWorker" in navigator){ navigator.serviceWorker.getRegistrations().then(function(regs){return Promise.all(regs.map(function(r){return r.unregister();}));}).catch(function(){}); } }catch(e){}
   try{ await Promise.race([remoteClearAsync(), new Promise(function(resolve){setTimeout(function(){resolve(false);},1500);})]); await new Promise(function(resolve){setTimeout(resolve,350);}); await Promise.race([remoteClearAsync(), new Promise(function(resolve){setTimeout(function(){resolve(false);},1500);})]); }catch(e){}
   try{ clearIndexedDB(); }catch(e){}
   location.replace(location.pathname+"?hardreset="+Date.now());
@@ -548,7 +555,7 @@ function updateResumeButton(){
 }
 function resumeGame(s){
   s=normalizeSession(s||readSession()); if(!s||!s.deck||!s.deck.length){ toast("没有可恢复的进度"); updateResumeButton(); return; }
-  hydrateSession(s); state.deck=s.deck; state.index=Math.min(s.index||0,s.deck.length-1); state.hp=s.hp||3; state.xp=s.xp||0; state.combo=0; state.maxCombo=s.maxCombo||0; state.correct=s.correct||0; state.wrong=s.wrong||[]; state.locked=false; state.revived=s.revived||0; state.levelCorrect=s.levelCorrect||0; state.repeatCounts=s.repeatCounts||{}; state.mode=s.mode||"normal"; state.completed=s.completed||false; state.requestedCount=s.requestedCount||null; state.answers=s.answers||{}; state.formatCursor=0; state.awaitingConfidence=false; state.pendingChoice=null;
+  hydrateSession(s); state.deck=s.deck; state.index=Math.min(s.index||0,s.deck.length-1); state.hp=s.hp||3; state.xp=s.xp||0; state.combo=0; state.maxCombo=s.maxCombo||0; state.correct=s.correct||0; state.wrong=s.wrong||[]; state.locked=false; state.revived=s.revived||0; state.levelCorrect=s.levelCorrect||0; state.repeatCounts=s.repeatCounts||{}; state.mode=s.mode||"normal"; state.completed=s.completed||false; state.requestedCount=s.requestedCount||null; state.chapter=s.chapter||null; state.chapterOrder=s.chapterOrder||"sequential"; state.answers=s.answers||{}; state.formatCursor=0; state.awaitingConfidence=false; state.pendingChoice=null;
   show("gameScreen"); renderQuestion(); toast("已恢复上次进度");
 }
 function todayKey(){ const d=new Date(); return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
@@ -613,7 +620,7 @@ function formatSampler(count){
   for(let i=0;i<count;i++){ const kid=kids[i%kids.length], fmt=formats[i%formats.length], pool=QUESTIONS.filter(function(q){return q.kid===kid&&q.format===fmt;}); if(pool.length){ const q=pool[(state.formatCursor++)%pool.length]; out.push(prepare(Object.assign({},q,{level:"题型专练"}),fmt)); } }
   return out;
 }
-function buildDeck(mode,count){
+function buildDeck(mode,count,chapter,chapterOrder){
   mode=mode||"normal"; const stats=readStats(), now=Date.now();
   const normalKids=Object.keys(KID_META).filter(function(k){return KID_META[k].level!=="Boss关";});
   const dueKids=normalKids.filter(function(k){return stats[k]&&stats[k].seen>0&&stats[k].due<=now;});
@@ -621,6 +628,7 @@ function buildDeck(mode,count){
   if(mode==="wrong"){ const pool=wrongKids.length?wrongKids:dueKids; return pool.map(function(k){return prepare(pickVariant(k,{preferDifferent:true}));}); }
   if(mode==="due"){ return dueKids.map(function(k){return prepare(pickVariant(k,{preferDifferent:true}));}); }
   if(mode==="daily"){ const remain=dailyRemaining(); if(remain<=0) return []; const kids=shuffle(normalKids).sort(function(a,b){return priority(b)-priority(a);}).slice(0,remain); return kids.map(function(k){return prepare(pickVariant(k,{preferDifferent:true}));}); }
+  if(mode==="chapter"){ let pool=QUESTIONS.filter(function(q){return q.chapter===chapter;}); if(!pool.length) return []; if(chapterOrder==="random") pool=shuffle(pool); else pool=pool.slice().sort(function(a,b){ const ka=Object.keys(KID_META).indexOf(a.kid), kb=Object.keys(KID_META).indexOf(b.kid); if(ka!==kb) return ka-kb; return (a.variant||0)-(b.variant||0); }); const n=count?Math.max(1,Math.min(pool.length,count)):pool.length; return pool.slice(0,n).map(function(q){return prepare(Object.assign({},q,{level:chapter}));}); }
   if(mode==="random"){ const n=Math.max(1,Math.min(20,count||5)); return shuffle(QUESTIONS).slice(0,n).map(function(q){return prepare(Object.assign({},q,{level:"乱序"}));}); }
   if(mode==="boss"){ return formatSampler(6); }
   const deck=[];
@@ -695,9 +703,9 @@ function next(){
   renderQuestion();
 }
 function prev(){ if(state.index>0){ const q=state.deck[state.index]; if(state.awaitingConfidence&&state.pendingChoice!==null){ resolveAnswer(state.pendingChoice,"未标注",1.0); } state.index--; saveSession(); renderQuestion(); } }
-function startGame(mode,count){
-  const deck=buildDeck(mode,count); if(!deck.length){ toast(mode==="wrong"?"暂时没有错题知识点":(mode==="due"?"今天没有到期复习":"题库为空")); return; }
-  state.deck=deck; state.index=0; state.hp=3; state.xp=0; state.combo=0; state.maxCombo=0; state.correct=0; state.wrong=[]; state.locked=false; state.revived=0; state.levelCorrect=0; state.repeatCounts={}; state.mode=mode||"normal"; state.requestedCount=count||null; state.completed=false; state.answers={}; state.formatCursor=0; state.awaitingConfidence=false; state.pendingChoice=null; try{localStorage.removeItem(RESET_KEY);}catch(e){} saveSession(); show("gameScreen"); renderQuestion();
+function startGame(mode,count,chapter,chapterOrder){
+  const deck=buildDeck(mode,count,chapter,chapterOrder); if(!deck.length){ toast(mode==="wrong"?"暂时没有错题知识点":(mode==="due"?"今天没有到期复习":"题库为空")); return; }
+  state.deck=deck; state.index=0; state.hp=3; state.xp=0; state.combo=0; state.maxCombo=0; state.correct=0; state.wrong=[]; state.locked=false; state.revived=0; state.levelCorrect=0; state.repeatCounts={}; state.mode=mode||"normal"; state.requestedCount=count||null; state.chapter=chapter||null; state.chapterOrder=chapterOrder||"sequential"; state.completed=false; state.answers={}; state.formatCursor=0; state.awaitingConfidence=false; state.pendingChoice=null; try{localStorage.removeItem(RESET_KEY);}catch(e){} saveSession(); show("gameScreen"); renderQuestion();
 }
 function renderResult(){
   state.completed=true; show("resultScreen"); $("progressBar").style.width="100%"; const total=state.deck.length, rate=total?state.correct/total:0; let rank="C";
@@ -715,13 +723,19 @@ function renderResult(){
   $("retryWrongBtn").classList.toggle("hidden",state.wrong.length===0); const best=localStorage.getItem("gsf-pre3-best")||"—"; if(best==="—"||rank.localeCompare(best)>0) localStorage.setItem("gsf-pre3-best",rank); refreshBest();
 }
 function refreshBest(){ const best=localStorage.getItem("gsf-pre3-best")||"—", due=dueCount(); $("bestText").textContent="最佳记录："+best+(due?(" ｜ 待复习 "+due):""); updateWrongButton(); updateDueButton(); updateDailyPanel(); updateHomeStats(); updateResumeButton(); }
-function repeatSession(){ if(state.mode==="wrong"){ retryWrong(); return; } startGame(state.mode,state.requestedCount); }
-function retryWrong(){ if(!state.wrong.length) return; const kids=[]; state.wrong.forEach(function(w){ if(w.question.kid&&kids.indexOf(w.question.kid)<0) kids.push(w.question.kid); }); state.deck=kids.map(function(k){return prepare(pickVariant(k,{preferDifferent:true}));}); state.index=0; state.hp=3; state.xp=0; state.combo=0; state.maxCombo=0; state.correct=0; state.wrong=[]; state.locked=false; state.revived=0; state.levelCorrect=0; state.repeatCounts={}; state.mode="wrong"; state.requestedCount=null; state.completed=false; state.answers={}; state.formatCursor=0; state.awaitingConfidence=false; state.pendingChoice=null; saveSession(); show("gameScreen"); renderQuestion(); }
+function repeatSession(){ if(state.mode==="wrong"){ retryWrong(); return; } startGame(state.mode,state.requestedCount,state.chapter,state.chapterOrder); }
+function retryWrong(){ if(!state.wrong.length) return; const kids=[]; state.wrong.forEach(function(w){ if(w.question.kid&&kids.indexOf(w.question.kid)<0) kids.push(w.question.kid); }); state.deck=kids.map(function(k){return prepare(pickVariant(k,{preferDifferent:true}));}); state.index=0; state.hp=3; state.xp=0; state.combo=0; state.maxCombo=0; state.correct=0; state.wrong=[]; state.locked=false; state.revived=0; state.levelCorrect=0; state.repeatCounts={}; state.mode="wrong"; state.requestedCount=null; state.chapter=null; state.chapterOrder="sequential"; state.completed=false; state.answers={}; state.formatCursor=0; state.awaitingConfidence=false; state.pendingChoice=null; saveSession(); show("gameScreen"); renderQuestion(); }
+function populateChapterSelect(){ const sel=$("chapterSelect"); if(!sel||sel.options.length) return; const order=["第一章 公司法的基础理论","第二章 公司的分类","第三章 公司的能力","第四章 公司的设立","第五章 股东资格与股东权利","第六章 公司的董事、监事、高级管理人员","专业专题 现行法与司法解释","综合 责任主体与组织关系","综合 公司分类"]; const present=order.filter(function(ch){return Object.keys(KID_META).some(function(k){return KID_META[k].chapter===ch;});}); present.forEach(function(ch){ const o=document.createElement("option"); o.value=ch; o.textContent=ch; sel.appendChild(o); }); }
+function updateModeUI(){ const mode=getSegment("modeSegmented","sequential"); const cg=$("chapterGroup"); if(cg) cg.classList.toggle("hidden",mode!=="chapter"); }
 function setActiveSegment(container,button){ const box=$(container); if(!box) return; Array.from(box.querySelectorAll(".seg-btn")).forEach(function(b){b.classList.toggle("active",b===button);}); }
 function getSegment(container,fallback){ const b=$(container).querySelector(".seg-btn.active"); return b?b.dataset.value:fallback; }
-Array.from($("modeSegmented").querySelectorAll(".seg-btn")).forEach(function(b){ b.addEventListener("click",function(){setActiveSegment("modeSegmented",b);}); });
+Array.from($("modeSegmented").querySelectorAll(".seg-btn")).forEach(function(b){ b.addEventListener("click",function(){setActiveSegment("modeSegmented",b);updateModeUI();}); });
+Array.from($("chapterOrderSegmented").querySelectorAll(".seg-btn")).forEach(function(b){ b.addEventListener("click",function(){setActiveSegment("chapterOrderSegmented",b);}); });
+populateChapterSelect();
+updateModeUI();
+(function(){ const qn=QUESTIONS.length, kn=Object.keys(KID_META).length; ['chipQ','leadQ'].forEach(function(id){ const e=document.getElementById(id); if(e) e.textContent=qn; }); ['chipK','leadK'].forEach(function(id){ const e=document.getElementById(id); if(e) e.textContent=kn; }); })();
 Array.from($("countSegmented").querySelectorAll(".seg-btn")).forEach(function(b){ b.addEventListener("click",function(){setActiveSegment("countSegmented",b);}); });
-$("playBtn").addEventListener("click",function(){ const mode=getSegment("modeSegmented","sequential"), count=Number(getSegment("countSegmented","5")); clearLocalSession(); if(mode==="random") startGame("random",count); else startGame("normal",count); });
+$("playBtn").addEventListener("click",function(){ const mode=getSegment("modeSegmented","sequential"), count=Number(getSegment("countSegmented","5")), chapter=$("chapterSelect").value, chapterOrder=getSegment("chapterOrderSegmented","sequential"); clearLocalSession(); if(mode==="chapter") startGame("chapter",count,chapter,chapterOrder); else if(mode==="random") startGame("random",count); else startGame("normal",count); });
 $("prevBtn").addEventListener("click",prev);
 $("wrongOnlyBtn").addEventListener("click",function(){startGame("wrong");});
 $("dueOnlyBtn").addEventListener("click",function(){startGame("due");});
@@ -743,7 +757,7 @@ function formatMasteryText(kid){ const s=readStats()[kid],fs=s&&s.formatStats?s.
 function isStable(kid){ return stableFormatCount(kid)>=2; }
 function lawSource(anchor){ const a=anchor||""; if(a.indexOf("公司法")>=0) return "《公司法》"; if(a.indexOf("民法典")>=0) return "《民法典》"; if(a.indexOf("担保制度解释")>=0||a.indexOf("担保解释")>=0) return "担保制度解释"; if(a.indexOf("法释〔2024〕7号")>=0) return "法释〔2024〕7号"; if(a.indexOf("法释〔2024〕15号")>=0) return "法释〔2024〕15号"; return "其他法源"; }
 let lawsPromise=null;
-function ensureLawsLoaded(){ if(window.GSF_LAWS) return Promise.resolve(window.GSF_LAWS); if(lawsPromise) return lawsPromise; lawsPromise=new Promise(function(resolve,reject){ const s=document.createElement("script"); s.src="laws.js?v=40"; s.onload=function(){resolve(window.GSF_LAWS||[]);}; s.onerror=function(){reject(new Error("laws.js load failed"));}; document.head.appendChild(s); }); return lawsPromise; }
+function ensureLawsLoaded(){ if(window.GSF_LAWS) return Promise.resolve(window.GSF_LAWS); if(lawsPromise) return lawsPromise; lawsPromise=new Promise(function(resolve,reject){ const s=document.createElement("script"); s.src="laws.js?v=41"; s.onload=function(){resolve(window.GSF_LAWS||[]);}; s.onerror=function(){reject(new Error("laws.js load failed"));}; document.head.appendChild(s); }); return lawsPromise; }
 function masteryStars(kid){ const n=stableFormatCount(kid); if(n>=3) return "★★★"; if(n===2) return "★★☆"; if(n===1) return "★☆☆"; return "☆☆☆"; }
 function renderStudy(){
   const query=($("studySearch").value||"").trim().toLowerCase(), chapter=$("studyChapter").value, wrongOnly=$("studyWrongOnly").checked, grade=$("studyGrade").value, mastery=$("studyMastery").value, dueOnly=$("studyDueOnly").checked, wrongKids=readWrongKids(), stats=readStats();
@@ -789,7 +803,7 @@ function importSaveFile(file){
   const r=new FileReader(); r.onload=function(){ try{ const data=JSON.parse(r.result); if(data.kind!=="gsf-mobile-save") throw new Error("不是本应用导出的存档"); if(data.session) localStorage.setItem(SESSION_KEY,JSON.stringify(data.session)); if(data.stats) writeStats(data.stats); if(data.wrongKids) writeWrongKids(data.wrongKids,true); if(data.profile) writeProfile(data.profile); if(data.best) localStorage.setItem("gsf-pre3-best",data.best); alert("存档导入成功，页面将刷新"); location.reload(); }catch(e){ alert("导入失败："+e.message); } }; r.readAsText(file,"utf-8");
 }
 function buildReport(){
-  const all=readStats(), lines=["# 公司法前三章｜错题档案 v4","生成时间："+new Date().toLocaleString(),"","## 薄弱知识点"]; const arr=Object.keys(all).map(function(kid){return Object.assign({kid:kid},all[kid]);}).filter(function(s){return s.wrong>0;}).sort(function(a,b){return b.wrong-a.wrong||b.wrong/b.seen-a.wrong/a.seen;});
+  const all=readStats(), lines=["# 公司法前六章｜错题档案 v4","生成时间："+new Date().toLocaleString(),"","## 薄弱知识点"]; const arr=Object.keys(all).map(function(kid){return Object.assign({kid:kid},all[kid]);}).filter(function(s){return s.wrong>0;}).sort(function(a,b){return b.wrong-a.wrong||b.wrong/b.seen-a.wrong/a.seen;});
   if(arr.length) arr.forEach(function(s){ lines.push("- "+s.topic+"：错 "+s.wrong+" 次 / 共做 "+s.seen+" 次｜风险分："+(s.riskScore||0)+"｜最近把握："+(s.lastConfidence||"无")+"｜最近错选："+(s.lastWrongChoice||"无")+"｜错因："+(s.lastReason||"未标注")+"｜下次复习："+nextReviewLabel(s)); }); else lines.push("- 暂无错题记录");
   lines.push("","## 章节薄弱"); const chapters={}; Object.keys(all).forEach(function(kid){ const s=all[kid], meta=KID_META[kid]||{}; if(s.wrong>0&&meta.chapter){ if(!chapters[meta.chapter]) chapters[meta.chapter]={wrong:0,seen:0}; chapters[meta.chapter].wrong+=s.wrong; chapters[meta.chapter].seen+=s.seen; } }); const ch=Object.keys(chapters).map(function(k){return {chapter:k,wrong:chapters[k].wrong,seen:chapters[k].seen};}).sort(function(a,b){return b.wrong-a.wrong;}); if(ch.length) ch.forEach(function(x){lines.push("- "+x.chapter+"：错 "+x.wrong+" / 做 "+x.seen);}); else lines.push("- 暂无");
   lines.push("","## 错因分布"); const reasons={}; Object.keys(all).forEach(function(kid){Object.keys(all[kid].reasons||{}).forEach(function(r){reasons[r]=(reasons[r]||0)+all[kid].reasons[r];});}); const rs=Object.keys(reasons).map(function(r){return {reason:r,count:reasons[r]};}).sort(function(a,b){return b.count-a.count;}); if(rs.length) rs.forEach(function(x){lines.push("- "+x.reason+"："+x.count+" 次");}); else lines.push("- 暂无");
@@ -814,6 +828,9 @@ $("closeReportBtn").addEventListener("click",function(){$("reportModal").classLi
 $("copyReportBtn").addEventListener("click",function(){const t=$("reportText");t.select();t.setSelectionRange(0,999999);if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.value).then(function(){toast("报告已复制");});}else{document.execCommand("copy");toast("报告已复制");}});
 $("restartLink").addEventListener("click",function(){if(confirm("确定清空当前进度并重新开始？错题统计会保留。")){restartSession();}});
 $("cleanCacheLink").addEventListener("click",function(){if(!confirm("第一步确认：这会清除全部数据——当前进度、错题统计、连胜、冻结卡、本地存档、服务端存档、Service Worker 和浏览器缓存。确定继续？")) return; if(!confirm("第二步最终确认：清空后不可恢复，确定全部清除并重置吗？")) return; hardResetAll();});
+$("exportSaveBtn").addEventListener("click",exportSave);
+$("importSaveBtn").addEventListener("click",function(){$("importSaveFile").click();});
+$("importSaveFile").addEventListener("change",function(){if(this.files&&this.files[0])importSaveFile(this.files[0]);this.value="";});
 if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("./sw.js",{updateViaCache:"none"}).then(function(reg){reg.update();}).catch(function(){});});}
 </script>
 </body>
