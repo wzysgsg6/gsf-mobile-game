@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>公司法·前六章｜知识副本</title>
+<title>公司法·全12章｜知识副本</title>
 <style>
 :root{
   --bg:#0b1020; --panel:#141b31; --panel2:#1c2542; --line:#2f3b62;
@@ -233,8 +233,8 @@ h1 span{color:var(--gold)}
 
   <section class="screen" id="startScreen">
     <div class="hero">
-      <div class="eyebrow">公司法前六章 · 知识副本</div>
-      <p class="lead">公司法前六章已整理为 <span id="leadQ">191</span> 题、<span id="leadK">43</span> 个知识点和四类题型。答错后换表述回炉，之后按 1、3、7、14 天继续复习。</p>
+      <div class="eyebrow">公司法全12章 · 知识副本</div>
+      <p class="lead">公司法全12章已整理为 <span id="leadQ">191</span> 题、<span id="leadK">43</span> 个知识点和四类题型。答错后换表述回炉，之后按 1、3、7、14 天继续复习。</p>
       <div class="chips">
         <span class="chip">题库 <span id="chipQ">191</span> 题</span>
         <span class="chip"><span id="chipK">43</span> 个知识点</span>
@@ -381,7 +381,7 @@ h1 span{color:var(--gold)}
   </section>
 
   <div class="modal hidden" id="reportModal"><div class="modal-card"><h3 id="reportTitle">错题档案／学习报告</h3><p class="small">复制后发给我，我就能按你的错因继续追问。</p><textarea id="reportText" readonly></textarea><div class="modal-actions"><button class="primary" id="copyReportBtn">复制报告</button><button class="secondary" id="closeReportBtn">关闭</button></div></div></div>
-<div class="footer">公司法第一章—第六章 + 专业专题 · 题库 v8（192 题） · 含法条定位/真假法谚/短案例</div>
+<div class="footer">公司法第一章—第十二章 + 专业专题 · 题库 v9（362 题 / 102 知识点） · 含法条定位/真假法谚/短案例</div>
 </div>
 <div class="toast" id="toast"></div>
 <script src="knowledge-points.js?v=42"></script>
@@ -710,7 +710,7 @@ function startGame(mode,count,chapter,chapterOrder){
 function renderResult(){
   state.completed=true; show("resultScreen"); $("progressBar").style.width="100%"; const total=state.deck.length, rate=total?state.correct/total:0; let rank="C";
   if(rate>=0.96&&state.hp===3) rank="S"; else if(rate>=0.88&&state.hp>=2) rank="A"; else if(rate>=0.72) rank="B";
-  $("rankText").textContent=rank; $("rankCopy").textContent="正确率 "+Math.round(rate*100)+"% · 复活 "+state.revived+" 次。当前题库 v8：43 个知识点。"; $("finalCorrect").textContent=state.correct+"/"+total; $("finalCombo").textContent="x"+state.maxCombo; $("finalXp").textContent=state.xp+" / "+getTotalXp()+" XP";
+  $("rankText").textContent=rank; $("rankCopy").textContent="正确率 "+Math.round(rate*100)+"% · 复活 "+state.revived+" 次。当前题库 v9：102 个知识点。"; $("finalCorrect").textContent=state.correct+"/"+total; $("finalCombo").textContent="x"+state.maxCombo; $("finalXp").textContent=state.xp+" / "+getTotalXp()+" XP";
   const allStats=readStats(), topics={}, chapters={}, reasons={};
   Object.keys(allStats).forEach(function(kid){ const s=allStats[kid], meta=KID_META[kid]||{}; if(s.wrong>0){ if(!topics[s.topic]) topics[s.topic]={topic:s.topic,wrong:0,seen:0,due:s.due}; topics[s.topic].wrong+=s.wrong; topics[s.topic].seen+=s.seen; topics[s.topic].due=Math.min(topics[s.topic].due||s.due,s.due||s.due); if(meta.chapter){ if(!chapters[meta.chapter]) chapters[meta.chapter]={chapter:meta.chapter,wrong:0,seen:0}; chapters[meta.chapter].wrong+=s.wrong; chapters[meta.chapter].seen+=s.seen; } } Object.keys(s.reasons||{}).forEach(function(r){ reasons[r]=(reasons[r]||0)+s.reasons[r]; }); });
   const topTopics=Object.keys(topics).map(function(k){return topics[k];}).sort(function(a,b){return b.wrong-a.wrong||b.wrong/b.seen-a.wrong/a.seen;}).slice(0,3);
@@ -788,7 +788,7 @@ function renderStudy(){
 }
 function buildOnePageChecklist(){
   const all=readStats(), arr=Object.keys(all).map(function(kid){return Object.assign({kid:kid},all[kid]);}).filter(function(s){return s.wrong>0;}).sort(function(a,b){return b.wrong-a.wrong||b.wrong/b.seen-a.wrong/a.seen;}).slice(0,5), due=Object.keys(all).filter(function(kid){return all[kid].due&&all[kid].due<=Date.now();});
-  const lines=["# 公司法前六章｜一页纸考前清单","生成时间："+new Date().toLocaleString(),"","## 最弱 5 个知识点"];
+  const lines=["# 公司法全12章｜一页纸考前清单","生成时间："+new Date().toLocaleString(),"","## 最弱 5 个知识点"];
   if(arr.length) arr.forEach(function(s,i){ const meta=KID_META[s.kid]||{}; lines.push((i+1)+". "+meta.topic+"（错 "+s.wrong+"/"+s.seen+"）"); lines.push("   法条："+(meta.anchors||[]).join("；")); lines.push("   最近错因："+(s.lastReason||"未标注")+"｜最近错选："+(s.lastWrongChoice||"无")+"｜下次复习："+nextReviewLabel(s)); }); else lines.push("暂无错题记录");
   lines.push("","## 今天到期"); if(due.length) due.forEach(function(kid){ const meta=KID_META[kid]||{}; lines.push("- "+meta.topic+"："+nextReviewLabel(all[kid])); }); else lines.push("- 暂无");
   lines.push("","## 建议顺序","1. 先看法条锚点和最近错因","2. 用 Study Mode 只看未稳定掌握","3. 再做对应知识点的另一题型");
@@ -803,7 +803,7 @@ function importSaveFile(file){
   const r=new FileReader(); r.onload=function(){ try{ const data=JSON.parse(r.result); if(data.kind!=="gsf-mobile-save") throw new Error("不是本应用导出的存档"); if(data.session) localStorage.setItem(SESSION_KEY,JSON.stringify(data.session)); if(data.stats) writeStats(data.stats); if(data.wrongKids) writeWrongKids(data.wrongKids,true); if(data.profile) writeProfile(data.profile); if(data.best) localStorage.setItem("gsf-pre3-best",data.best); alert("存档导入成功，页面将刷新"); location.reload(); }catch(e){ alert("导入失败："+e.message); } }; r.readAsText(file,"utf-8");
 }
 function buildReport(){
-  const all=readStats(), lines=["# 公司法前六章｜错题档案 v4","生成时间："+new Date().toLocaleString(),"","## 薄弱知识点"]; const arr=Object.keys(all).map(function(kid){return Object.assign({kid:kid},all[kid]);}).filter(function(s){return s.wrong>0;}).sort(function(a,b){return b.wrong-a.wrong||b.wrong/b.seen-a.wrong/a.seen;});
+  const all=readStats(), lines=["# 公司法全12章｜错题档案 v5","生成时间："+new Date().toLocaleString(),"","## 薄弱知识点"]; const arr=Object.keys(all).map(function(kid){return Object.assign({kid:kid},all[kid]);}).filter(function(s){return s.wrong>0;}).sort(function(a,b){return b.wrong-a.wrong||b.wrong/b.seen-a.wrong/a.seen;});
   if(arr.length) arr.forEach(function(s){ lines.push("- "+s.topic+"：错 "+s.wrong+" 次 / 共做 "+s.seen+" 次｜风险分："+(s.riskScore||0)+"｜最近把握："+(s.lastConfidence||"无")+"｜最近错选："+(s.lastWrongChoice||"无")+"｜错因："+(s.lastReason||"未标注")+"｜下次复习："+nextReviewLabel(s)); }); else lines.push("- 暂无错题记录");
   lines.push("","## 章节薄弱"); const chapters={}; Object.keys(all).forEach(function(kid){ const s=all[kid], meta=KID_META[kid]||{}; if(s.wrong>0&&meta.chapter){ if(!chapters[meta.chapter]) chapters[meta.chapter]={wrong:0,seen:0}; chapters[meta.chapter].wrong+=s.wrong; chapters[meta.chapter].seen+=s.seen; } }); const ch=Object.keys(chapters).map(function(k){return {chapter:k,wrong:chapters[k].wrong,seen:chapters[k].seen};}).sort(function(a,b){return b.wrong-a.wrong;}); if(ch.length) ch.forEach(function(x){lines.push("- "+x.chapter+"：错 "+x.wrong+" / 做 "+x.seen);}); else lines.push("- 暂无");
   lines.push("","## 错因分布"); const reasons={}; Object.keys(all).forEach(function(kid){Object.keys(all[kid].reasons||{}).forEach(function(r){reasons[r]=(reasons[r]||0)+all[kid].reasons[r];});}); const rs=Object.keys(reasons).map(function(r){return {reason:r,count:reasons[r]};}).sort(function(a,b){return b.count-a.count;}); if(rs.length) rs.forEach(function(x){lines.push("- "+x.reason+"："+x.count+" 次");}); else lines.push("- 暂无");
