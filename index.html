@@ -384,15 +384,15 @@ h1 span{color:var(--gold)}
 <div class="footer">公司法第一章—第六章 + 专业专题 · 题库 v8（192 题） · 含法条定位/真假法谚/短案例</div>
 </div>
 <div class="toast" id="toast"></div>
-<script src="knowledge-points.js?v=41"></script>
-<script src="questions.js?v=41"></script>
+<script src="knowledge-points.js?v=42"></script>
+<script src="questions.js?v=42"></script>
 <script>
 const QUESTIONS = window.GSF_QUESTIONS || [];
 const KID_META = window.GSF_KNOWLEDGE_POINTS || {};
 const QUESTION_BY_ID = {};
 QUESTIONS.forEach(function(q){ QUESTION_BY_ID[q.id]=q; });
-const LEVELS = ["第1关","第2关","第3关","第4章","第5章","第6章","专业关","Boss关"];
-const BANK_VERSION = 8;
+const LEVELS = ["第1关","第2关","第3关","第4章","第5章","第6章","第7章","第8章","第9章","第10章","第11章","第12章","专业关","Boss关"];
+const BANK_VERSION = 9;
 const state = {deck:[],index:0,hp:3,xp:0,combo:0,maxCombo:0,correct:0,wrong:[],locked:false,revived:0,levelCorrect:0,repeatCounts:{},mode:"normal",completed:false,formatCursor:0,awaitingConfidence:false,pendingChoice:null,hardResetting:false,answers:{},requestedCount:null,chapter:null,chapterOrder:"sequential"};
 const studyVariantIndex={}; let studyReturnScreen="startScreen"; let studyView="points";
 const $ = function(id){ return document.getElementById(id); };
@@ -725,7 +725,7 @@ function renderResult(){
 function refreshBest(){ const best=localStorage.getItem("gsf-pre3-best")||"—", due=dueCount(); $("bestText").textContent="最佳记录："+best+(due?(" ｜ 待复习 "+due):""); updateWrongButton(); updateDueButton(); updateDailyPanel(); updateHomeStats(); updateResumeButton(); }
 function repeatSession(){ if(state.mode==="wrong"){ retryWrong(); return; } startGame(state.mode,state.requestedCount,state.chapter,state.chapterOrder); }
 function retryWrong(){ if(!state.wrong.length) return; const kids=[]; state.wrong.forEach(function(w){ if(w.question.kid&&kids.indexOf(w.question.kid)<0) kids.push(w.question.kid); }); state.deck=kids.map(function(k){return prepare(pickVariant(k,{preferDifferent:true}));}); state.index=0; state.hp=3; state.xp=0; state.combo=0; state.maxCombo=0; state.correct=0; state.wrong=[]; state.locked=false; state.revived=0; state.levelCorrect=0; state.repeatCounts={}; state.mode="wrong"; state.requestedCount=null; state.chapter=null; state.chapterOrder="sequential"; state.completed=false; state.answers={}; state.formatCursor=0; state.awaitingConfidence=false; state.pendingChoice=null; saveSession(); show("gameScreen"); renderQuestion(); }
-function populateChapterSelect(){ const sel=$("chapterSelect"); if(!sel||sel.options.length) return; const order=["第一章 公司法的基础理论","第二章 公司的分类","第三章 公司的能力","第四章 公司的设立","第五章 股东资格与股东权利","第六章 公司的董事、监事、高级管理人员","专业专题 现行法与司法解释","综合 责任主体与组织关系","综合 公司分类"]; const present=order.filter(function(ch){return Object.keys(KID_META).some(function(k){return KID_META[k].chapter===ch;});}); present.forEach(function(ch){ const o=document.createElement("option"); o.value=ch; o.textContent=ch; sel.appendChild(o); }); }
+function populateChapterSelect(){ const sel=$("chapterSelect"); if(!sel||sel.options.length) return; const order=["第一章 公司法的基础理论","第二章 公司的分类","第三章 公司的能力","第四章 公司的设立","第五章 股东资格与股东权利","第六章 公司的董事、监事、高级管理人员","第七章 公司财务、会计","第八章 公司重大变更制度","第九章 公司的解散、清算","第十章 有限责任公司","第十一章 股份有限公司","第十二章 国家出资公司","专业专题 现行法与司法解释","综合 责任主体与组织关系","综合 公司分类"]; const present=order.filter(function(ch){return Object.keys(KID_META).some(function(k){return KID_META[k].chapter===ch;});}); present.forEach(function(ch){ const o=document.createElement("option"); o.value=ch; o.textContent=ch; sel.appendChild(o); }); }
 function updateModeUI(){ const mode=getSegment("modeSegmented","sequential"); const cg=$("chapterGroup"); if(cg) cg.classList.toggle("hidden",mode!=="chapter"); }
 function setActiveSegment(container,button){ const box=$(container); if(!box) return; Array.from(box.querySelectorAll(".seg-btn")).forEach(function(b){b.classList.toggle("active",b===button);}); }
 function getSegment(container,fallback){ const b=$(container).querySelector(".seg-btn.active"); return b?b.dataset.value:fallback; }
@@ -757,7 +757,7 @@ function formatMasteryText(kid){ const s=readStats()[kid],fs=s&&s.formatStats?s.
 function isStable(kid){ return stableFormatCount(kid)>=2; }
 function lawSource(anchor){ const a=anchor||""; if(a.indexOf("公司法")>=0) return "《公司法》"; if(a.indexOf("民法典")>=0) return "《民法典》"; if(a.indexOf("担保制度解释")>=0||a.indexOf("担保解释")>=0) return "担保制度解释"; if(a.indexOf("法释〔2024〕7号")>=0) return "法释〔2024〕7号"; if(a.indexOf("法释〔2024〕15号")>=0) return "法释〔2024〕15号"; return "其他法源"; }
 let lawsPromise=null;
-function ensureLawsLoaded(){ if(window.GSF_LAWS) return Promise.resolve(window.GSF_LAWS); if(lawsPromise) return lawsPromise; lawsPromise=new Promise(function(resolve,reject){ const s=document.createElement("script"); s.src="laws.js?v=41"; s.onload=function(){resolve(window.GSF_LAWS||[]);}; s.onerror=function(){reject(new Error("laws.js load failed"));}; document.head.appendChild(s); }); return lawsPromise; }
+function ensureLawsLoaded(){ if(window.GSF_LAWS) return Promise.resolve(window.GSF_LAWS); if(lawsPromise) return lawsPromise; lawsPromise=new Promise(function(resolve,reject){ const s=document.createElement("script"); s.src="laws.js?v=42"; s.onload=function(){resolve(window.GSF_LAWS||[]);}; s.onerror=function(){reject(new Error("laws.js load failed"));}; document.head.appendChild(s); }); return lawsPromise; }
 function masteryStars(kid){ const n=stableFormatCount(kid); if(n>=3) return "★★★"; if(n===2) return "★★☆"; if(n===1) return "★☆☆"; return "☆☆☆"; }
 function renderStudy(){
   const query=($("studySearch").value||"").trim().toLowerCase(), chapter=$("studyChapter").value, wrongOnly=$("studyWrongOnly").checked, grade=$("studyGrade").value, mastery=$("studyMastery").value, dueOnly=$("studyDueOnly").checked, wrongKids=readWrongKids(), stats=readStats();
