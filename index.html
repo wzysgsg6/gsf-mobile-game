@@ -816,6 +816,41 @@ function buildReport(){
   lines.push("","## 题目变式明细"); QUESTIONS.forEach(function(q){ const s=all[q.kid]; if(s&&s.variantSeen&&s.variantSeen[q.id]) lines.push("- ["+q.kid+"-v"+q.variant+"] "+q.topic+"｜做过 "+s.variantSeen[q.id]+" 次｜"+q.q); });
   return lines.join("\n");
 }
+function openPrintCard(){
+  const deck=(state.deck||[]).slice();
+  if(!deck.length){ toast("本局没有题目"); return; }
+  const esc=function(s){ return escapeHtml(s==null?"":s); };
+  const qs=deck.map(function(q,i){
+    const opts=(q.options||[]).map(function(o,j){ return "<li>"+String.fromCharCode(65+j)+". "+esc(o)+"</li>"; }).join("");
+    return "<section class=\"q\"><div class=\"meta\">第 "+(i+1)+" 题 · "+esc(q.topic)+(q.formatLabel?(" · "+esc(q.formatLabel)):"")+"</div>"
+      +"<div class=\"stem\">"+esc(q.prompt||q.q)+"</div><ol class=\"opts\">"+opts+"</ol></section>";
+  }).join("");
+  const ans=deck.map(function(q,i){
+    return "<li><b>第 "+(i+1)+" 题　答案："+String.fromCharCode(65+(q.answer||0))+"</b>　<span class=\"a\">"+esc(q.anchor||"")+"</span><br>"+esc(q.explain||"")+"</li>";
+  }).join("");
+  const w=window.open("","_blank");
+  if(!w){ toast("浏览器拦截了新窗口，请允许弹窗后重试"); return; }
+  w.document.open();
+  w.document.write("<!doctype html><html lang=\"zh-CN\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">"
+    +"<title>公司法题卡 · "+deck.length+" 题</title><style>"
+    +"body{font-family:-apple-system,\"PingFang SC\",\"Microsoft YaHei\",sans-serif;color:#111;margin:24px;line-height:1.75}"
+    +"h1{font-size:20px;margin:0 0 4px}.sub{color:#666;font-size:13px;margin-bottom:18px}"
+    +".q{margin:0 0 18px;page-break-inside:avoid}"
+    +".meta{font-size:12px;color:#666}.stem{margin:4px 0 6px;font-weight:600}"
+    +".opts{margin:0;padding-left:22px}.opts li{margin:2px 0}"
+    +"hr{border:0;border-top:1px solid #ddd;margin:24px 0}"
+    +".ans-list{padding-left:22px}.ans-list li{margin-bottom:12px}.a{color:#666;font-size:12px}"
+    +"@media print{body{margin:12mm}.no-print{display:none}}"
+    +"</style></head><body>"
+    +"<h1>公司法 · 知识副本题卡</h1><div class=\"sub\">共 "+deck.length+" 题　生成时间："+new Date().toLocaleString()+"</div>"
+    +"<div class=\"no-print\" style=\"margin-bottom:16px\"><button onclick=\"window.print()\">打印 / 存为 PDF</button></div>"
+    +qs
+    +"<hr><h1>答案与解析</h1><ol class=\"ans-list\">"+ans+"</ol>"
+    +"</body></html>");
+  w.document.close();
+  try{ w.focus(); }catch(e){}
+}
+$("printBtn").addEventListener("click",openPrintCard);
 $("mainMenuBtn").addEventListener("click",function(){ if(!$("gameScreen").classList.contains("hidden")) saveSession(); show("startScreen"); refreshBest(); updateResumeButton(); });
 $("backBtn").addEventListener("click",backAction);
 $("studyBtn").addEventListener("click",openStudy);
