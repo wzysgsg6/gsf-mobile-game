@@ -270,7 +270,7 @@ h1 span{color:var(--gold)}
         <button class="primary start-cta" id="playBtn">开始答题</button>
       </div>
       <div class="quick-actions">
-        <button class="secondary" id="wrongOnlyBtn">错题重练</button>
+        <button class="secondary" id="wrongOnlyBtn">薄弱重练</button>
         <button class="secondary hidden" id="dueOnlyBtn">到期复习</button>
         <button class="secondary" id="studyStartBtn">知识卡浏览</button>
         <button class="secondary hidden" id="resumeBtn">继续上次进度</button>
@@ -653,7 +653,7 @@ function show(id){ ["startScreen","gameScreen","breakScreen","resultScreen","stu
 function toast(msg){ const t=$("toast"); t.textContent=msg; t.classList.add("show"); setTimeout(function(){t.classList.remove("show");},1600); }
 function markWrongKid(kid){ const ids=readWrongKids(); if(ids.indexOf(kid)<0) ids.push(kid); writeWrongKids(ids); }
 function markRightKid(kid){ const s=readStats()[kid]; if(s && (s.correct||0)>=2){ const ids=readWrongKids(), i=ids.indexOf(kid); if(i>=0){ ids.splice(i,1); writeWrongKids(ids); } } }
-function updateWrongButton(){ const n=readWrongKids().filter(function(k){return KID_META[k];}).length; const b=$("wrongOnlyBtn"); if(!b) return; b.textContent=n?("只重练错题知识点（"+n+"）"):"只重练错题知识点"; b.disabled=n===0; b.classList.toggle("hidden",n===0); }
+function updateWrongButton(){ const n=readWrongKids().filter(function(k){return KID_META[k];}).length; const b=$("wrongOnlyBtn"); if(!b) return; b.textContent=n?("只重练薄弱知识点（"+n+"）"):"只重练薄弱知识点"; b.disabled=n===0; b.classList.toggle("hidden",n===0); }
 function updateDueButton(){ const n=dueCount(), b=$("dueOnlyBtn"); if(!b) return; b.textContent=n?("今日到期复习（"+n+"）"):"今日到期复习"; b.disabled=n===0; b.classList.toggle("hidden",n===0); }
 function updateHud(){
   if(!state.deck.length) return; const q=state.deck[state.index], st=readStats()[q.kid];
@@ -710,7 +710,7 @@ function next(){
 }
 function prev(){ if(state.index>0){ const q=state.deck[state.index]; if(state.awaitingConfidence&&state.pendingChoice!==null){ resolveAnswer(state.pendingChoice,"未标注",1.0); } state.index--; saveSession(); renderQuestion(); } }
 function startGame(mode,count,chapter,chapterOrder){
-  const deck=buildDeck(mode,count,chapter,chapterOrder); if(!deck.length){ toast(mode==="wrong"?"暂时没有错题知识点":(mode==="due"?"今天没有到期复习":"题库为空")); return; }
+  const deck=buildDeck(mode,count,chapter,chapterOrder); if(!deck.length){ toast(mode==="wrong"?"暂时没有薄弱知识点":(mode==="due"?"今天没有到期复习":"题库为空")); return; }
   state.deck=deck; state.index=0; state.hp=3; state.xp=0; state.combo=0; state.maxCombo=0; state.correct=0; state.wrong=[]; state.locked=false; state.revived=0; state.levelCorrect=0; state.repeatCounts={}; state.mode=mode||"normal"; state.requestedCount=count||null; state.chapter=chapter||null; state.chapterOrder=chapterOrder||"sequential"; state.completed=false; state.answers={}; state.formatCursor=0; state.awaitingConfidence=false; state.pendingChoice=null; try{localStorage.removeItem(RESET_KEY);}catch(e){} saveSession(); show("gameScreen"); renderQuestion();
 }
 function renderResult(){
