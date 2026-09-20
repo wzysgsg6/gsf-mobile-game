@@ -142,6 +142,7 @@ h1 span{color:var(--gold)}
 .top-right{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
 .report-link{border:1px solid rgba(110,168,254,.35);background:rgba(110,168,254,.09);color:#d9e6ff;border-radius:999px;padding:7px 11px;font-size:13px;cursor:pointer}
 .report-link:hover{background:rgba(110,168,254,.16)}
+.report-link.refresh{border-color:rgba(83,216,160,.45);background:rgba(83,216,160,.12);color:#bcf7df;font-weight:700}
 .report-link.danger{border-color:rgba(255,107,129,.4);background:rgba(255,107,129,.08);color:#ffdce2}
 .report-link.danger:hover{background:rgba(255,107,129,.16)}
 .recall{font-size:13px;color:#ffd166;line-height:1.55;margin:0 0 10px;padding:9px 11px;border:1px solid rgba(255,209,102,.3);background:rgba(255,209,102,.07);border-radius:12px}
@@ -226,7 +227,7 @@ h1 span{color:var(--gold)}
 <div class="app">
   <div class="top">
     <div class="brand">商法法考学习 · <b>知识副本</b></div>
-    <div class="top-right"><div class="best" id="bestText">最佳记录：—</div><button class="report-link" id="mainMenuBtn">主菜单</button><button class="report-link" id="studyBtn">知识卡</button><button class="report-link" id="exportSaveBtn">导出存档</button><button class="report-link" id="importSaveBtn">导入存档</button><input type="file" id="importSaveFile" accept=".json,application/json" class="hidden"><button class="report-link" id="reportBtn">错题报告</button><button class="report-link" id="restartLink">重开</button><button class="report-link danger" id="cleanCacheLink">彻底重置</button></div>
+    <div class="top-right"><div class="best" id="bestText">最佳记录：—</div><button class="report-link refresh" id="refreshBtn">↻ 刷新</button><button class="report-link" id="mainMenuBtn">主菜单</button><button class="report-link" id="studyBtn">知识卡</button><button class="report-link" id="exportSaveBtn">导出存档</button><button class="report-link" id="importSaveBtn">导入存档</button><input type="file" id="importSaveFile" accept=".json,application/json" class="hidden"><button class="report-link" id="reportBtn">错题报告</button><button class="report-link" id="restartLink">重开</button><button class="report-link danger" id="cleanCacheLink">彻底重置</button></div>
   </div>
 
   <div class="back-bar hidden" id="backBar"><button class="secondary" id="backBtn">← 返回上一级</button></div>
@@ -851,6 +852,18 @@ function openPrintCard(){
   try{ w.focus(); }catch(e){}
 }
 $("printBtn").addEventListener("click",openPrintCard);
+function hardRefreshApp(){
+  try{ if(!$("gameScreen").classList.contains("hidden")) saveSession(); }catch(e){}
+  toast("正在检查更新…");
+  (async function(){
+    try{
+      if("serviceWorker" in navigator){ const regs=await navigator.serviceWorker.getRegistrations(); await Promise.all(regs.map(function(r){ return r.unregister(); })); }
+      if("caches" in window){ const keys=await caches.keys(); await Promise.all(keys.map(function(k){ return caches.delete(k); })); }
+    }catch(e){}
+    location.reload();
+  })();
+}
+$("refreshBtn").addEventListener("click",hardRefreshApp);
 $("mainMenuBtn").addEventListener("click",function(){ if(!$("gameScreen").classList.contains("hidden")) saveSession(); show("startScreen"); refreshBest(); updateResumeButton(); });
 $("backBtn").addEventListener("click",backAction);
 $("studyBtn").addEventListener("click",openStudy);
